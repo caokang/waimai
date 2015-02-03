@@ -1,0 +1,8 @@
+ <ul class="list-unstyled left-border hidden-xs">
+  <volist name="foodcatlist" id="sub" offset="0" length='7'>
+  
+   <li> <a href="{:U('List/index','id='.$sub['fcid'])}" class="list-group-item"><span style="margin-left:60px;">{$sub.fcname}</span><span class="fa fa-caret-right pull-right"></span></a></li>
+  </volist>
+  
+  
+</ul>

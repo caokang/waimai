@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>我的外卖_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/kfc/css/kfc.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN THEME STYLES --> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+ <script src="__ROOT__/Public/js/sco.ajax.js"></script> 
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+
+
+<include file="Public:header" />
+
+<div class=" container " style="margin-top:10px">
+<div class="panel panel-default" style="min-height:600px">
+  <div class="panel-body">
+<div class="row">
+  <div class="col-lg-2 col-md-2" >
+
+ <ul class="list-group list-unstyled" style="font-size:14px;">
+	<li class="list-group-item " style="background-color: #F5F5F5;"><i class="fa fa-th-large"></i> 我的外卖</li>
+  
+ 
+ </ul>
+
+   </div>   
+	  <div class="col-lg-10 col-md-10 col-xs-12 " >
+	  
+ 
+
+		
+	
+
+  <h3>我的订单</h3>
+
+
+		
+         <table class="table ta">
+        <thead>
+          <tr>
+            <th>订单号</th>
+           
+            <th>下单时间</th>
+            <th>订单金额</th>
+			<th>订单状态</th>
+			<th>结束时间</th>
+			<th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+		<volist name="orderlist" id="vo">
+          <tr>
+            <td>{$vo.oid}</td>
+           
+            <td><empty name="vo.order_ctime"><else /> {$vo.order_ctime|date="Y-m-d H:i",###}</empty></td>
+            <td>{$vo.orderprice}</td>
+			<td><switch name="vo.orderstatus">
+			
+                                            <case value="4"> 已完成   </case>
+													<case value="5">送货中   </case>
+                                                    <default /> 提交成功
+                                                   </switch></td>
+            <td><empty name="vo.order_endtime"><else /> {$vo.order_endtime|date="Y-m-d H:i",###}</empty></td>
+			<td>
+			 <a href="{:U('Member/orderdetail/','id='.$vo['oid'])}" data-target="#ajax_target" data-trigger="ajax">查看</a>
+			
+			</td>
+           
+          </tr>
+		  </volist>
+     
+        </tbody>
+      </table>
+	   
+	  
+      
+	    <div class="row">
+					  <div class="col-md-7 col-sm-12">
+					  </div>
+					  <div class="col-md-5 col-sm-12">
+					          
+
+                              <ul class="pagination pull-right">
+							    {$page}
+                                
+                             </ul>
+
+
+					  </div>
+					  
+					  
+					  </div>
+			 
+	
+			  <div id="ajax_target">
+			  
+			  	
+				
+			  </div>
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 </div>
+			 </div> 
+			 
+			 
+			 
+			 
+			 </div>
+			 </div>
+
+ 	 </div>
+			 </div>   
+</div><!-- end container -->
+
+
+
+<include file="Public:foot" />	
+
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+
+</body>
+<!-- END BODY -->
+</html>

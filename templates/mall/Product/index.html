@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>
+	
+	{$fooditem.fname}_{$name}
+
+
+	
+	
+	</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="{key}" name="description" />
+	<meta content="{des}" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+     <link href="__ROOT__/templates/mall/css/cart-min.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+  <include file="Public:header" />
+  
+    <!-- begin container -->
+  <div class="container">
+      
+         <div class="row">
+             <div class="col-md-3 hidden-xs">
+			
+			 
+			 <include file="Public:cleft" />
+			 
+			 
+			 </div>
+			 <div class="col-md-9 ">
+			 
+			<div class="row top5" >
+             	  <div class="col-md-6 ">
+  <div class="thumbnail">
+ <img src="{$fooditem.fpic}" class="img-responsive">
+		</div>
+             </div>
+			   <div class="col-md-6 simpleCart_shelfItem">
+			   
+<h1 style="font-size:20px;" class="item_name">{$fooditem.fname}</h1>
+ <hr> 
+<div class="well "> 
+	<p>价格：<span class="item_price" style="color:#FF7700;font-weight:600;font-size:14px"> {$fooditem.fprice} </span></P>
+		
+	<p>数量：<input style="padding:5px 5px 5px 10px;width:40px;" value="1" size="2" class="item_Quantity" type="text"></P>
+    
+	<p>	<span class="pull-right "><a  href="javascript:;" class="btn btn-warning  item_add"><i class="fa fa-shopping-cart"></i> 加入购物车</a> </span></P>
+	<div class="clearfix"></div>
+</div>		
+			 </div>
+            </div>			 
+	
+
+
+<div style="min-height:400px;">
+    <ul role="tablist" class="nav nav-tabs" id="myTab">
+      <li class="active"><a data-toggle="tab" role="tab" href="#home">商品介绍</a></li>
+     
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div id="home" class="tab-pane fade in active">
+     
+	 <div style="margin-top:30px;line-height:30px;">
+	 <p >
+	 {$fooditem.fcontent}
+	 	 </p>
+	 
+	 </div> 
+	 </div>
+   
+    </div>
+  </div>	
+       
+
+
+ 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+			
+			 
+	
+			 
+			 </div>
+		
+			 
+		</div>
+ 
+   </div>
+   
+  
+ <!-- begin container -->
+
+
+<include file="Public:foot" />
+
+
+
+
+<!-- Modal -->
+
+
+	<!-- copy right:超级外卖  www.bijiadao.net-->
+</body>
+<!-- END BODY -->
+</html>

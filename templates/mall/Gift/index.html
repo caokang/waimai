@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>积分兑换_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+ <script src="__ROOT__/Public/js/sco.ajax.js"></script> 
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+  <include file="Public:header" />
+  
+    <!-- begin container -->
+  <div class="container">
+      
+         <div class="row">
+             <div class="col-md-3">
+	<include file="Public:cleft" />
+			 
+			 
+			 
+			 
+			 </div>
+			 <div class="col-md-9 ">
+			 
+			  <div class="row" style="margin-top:10px;min-height:500px;">
+	             <volist name="giftlist" id="vo">
+			   <div class="col-md-3">
+			   <div class="thumbnail i_lists">
+	
+	  <img  src="{$vo.goodpic}">
+	  
+	  <div class="">
+        <h3>{$vo.goodname}</h3>
+       
+    <p>积分：<span style="color:#FF7700;font-weight:600;font-size:14px" >{$vo.credits}</span>　　　
+	<empty name="uid">
+	 <a rel="nofollow" class="btn btn-danger btn-xs" href="/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" > 我要兑换</a>
+	
+	<else/>
+	<a class="btn btn-danger btn-xs "  href="{:U('Gift/add/','id='.$vo['cgid'])}" data-toggle="modal" data-target="#myModals"> 我要兑换</a></p>
+	 
+	 </empty>
+	 <div class="clearfix"></div>
+		
+		<div class="clearfix"></div>
+	  </div>
+	  
+	  
+	  
+	
+		
+		
+		
+      </div>
+	   </div>
+			 
+			   
+			    </volist>
+			   
+         </div>		
+			
+
+<ul class="pagination">
+{$page}
+</ul>
+
+ 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+			
+			 
+	
+			 
+			 </div>
+		
+			 
+		</div>
+ 
+   </div>
+   
+  
+ <!-- begin container -->
+
+
+<include file="Public:foot" />
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+</div><!-- /.modal -->	 
+
+  <script >
+	
+	$('#myModals').on('hidden.bs.modal', function (e) {
+	
+
+$(this).removeData('bs.modal'); 
+	
+	
+})
+</script>	
+
+	<!-- copy right:超级外卖  www.bijiadao.net-->
+</body>
+<!-- END BODY -->
+</html>

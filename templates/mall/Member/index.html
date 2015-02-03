@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>我的外卖_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+   
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN THEME STYLES --> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+  
+ 
+
+
+<include file="Public:header" />
+
+
+    
+         
+<!-- begin container -->
+
+<div class="container" style="margin-top:10px;min-height:400px;">
+
+<div class="row">
+ <div class=" col-lg-2 col-md-2 col-xs-12">
+	     <include file="Public:mleft" />
+			 
+	 
+			 
+			 </div>
+	  <div class="col-lg-10 col-md-10 col-xs-12">
+	  
+	
+<div class="panel panel-default" style="min-height:400px;">
+        <div class="panel-heading">
+    <h3 class="panel-title">我的外卖</h3>
+  </div>
+  <div class="panel-body"　>
+  
+  <div class="alert alert-warning"><strong> {$username}</strong>,欢迎回来！</div>
+  <p> 订单数：<strong style="color:#FF7700;font-size:14px"> {$ordercount}</strong> <br>
+ 积分数：<strong style="color:#FF7700;font-size:14px"> {$usercredit}</strong> 
+  </p>
+  <hr>
+ <strong>最新动态</strong> 
+ 
+  <ul class="list-unstyled">
+  <volist name="toplist" id="vo">
+  <li>{$vo.atitle}</li>
+  </volist>
+  
+  
+  </ul>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+</div>
+ 
+			 
+			 
+			 </div>
+			 </div>
+
+    
+</div><!-- end container -->
+
+
+
+<include file="Public:footer" />	
+
+
+
+</body>
+<!-- END BODY -->
+</html>

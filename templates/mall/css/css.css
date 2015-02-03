@@ -1,0 +1,370 @@
+/*********************
+ 自定模板 基于　bootcss
+*********************/
+body{ background-color: #fff;
+color: #666; 
+  font-family: arial;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size:14px; 
+  padding-bottom: 70px; }
+
+ .top5{margin-top:5px;}
+ .row-left{padding-left:0px;}
+ .row-right{padding-right:0px;}
+ .row-padding{padding-right:5px;padding-left:5px;}
+ 
+.head_top{background: none repeat scroll 0 0 #F1F1F1;
+    border-bottom: 1px solid #E5E5E5;
+    color: #666666;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;}
+.head_top a{color: #666666; margin-left: 30px;}
+
+.list-inline > li:first-child {
+    padding-left: 5px;
+} 
+
+.Validform_right{color: #35AA47;}
+  .Validform_wrong{color: #BB2413;}
+   .Validform_right span{margin-top:0px;}
+ 
+ .Validform_checktip{
+	margin-left:8px;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+}
+.Validform_right{
+	color:#71b83d;
+	padding-left:20px;
+	background:url(images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(images/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999'); box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#999;
+background: -moz-linear-gradient(top, #999, #666 100%); background: -webkit-gradient(linear, 0 0, 0 100%, from(#999), to(#666)); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#666666');}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#ccc;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #bbb; border-top:none; text-align:left;}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   /*********************
+navbar
+*********************/
+
+.bs-docs-nav {
+    background-color: #FF7700;
+    border-bottom: 0 none;
+    margin-bottom: 0;
+	font-size:16px;
+}
+.bs-home-nav .bs-nav-b {
+    display: none;
+}
+.bs-docs-nav .navbar-brand, .bs-docs-nav .navbar-nav > li > a {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.bs-docs-nav .navbar-nav > li > a:hover, .bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover {
+    background-color: #Fff;
+    color: #FF7700;
+	font-weight: 600;
+}
+.bs-docs-nav .navbar-toggle .icon-bar {
+    background-color: #FFFFFF;
+}
+.bs-docs-nav .navbar-header .navbar-toggle {
+    border-color: #FFFFFF;
+}
+.bs-docs-nav .navbar-header .navbar-toggle:hover, .bs-docs-nav .navbar-header .navbar-toggle:focus {
+    background-color: #FF7700;
+    border-color: FFFFFF;
+}
+.bs-docs-nav .navone{width:262px;text-align:center;}
+
+ 
+ 
+ 
+ .left-border{
+  border: 3px solid #FF7700;
+ 
+ }
+ .left-border .list-group-item{border-bottom: 0px solid #DDDDDD;
+ border-left: 0px solid #DDDDDD;border-right: 0px solid #DDDDDD;}
+ 
+ .gg a{font-size:13px;color:#999;line-height:25px;}
+
+ .i_list{text-align:center;background-color:#F7F6F6;}
+ .i_list h3{font-size:13px;margin-top:5px;margin-bottom:5px;}
+ 
+  .i_lists{text-align:center;}
+  .i_lists img{width:120px;height:120px;}
+  
+ .i_lists h3{font-size:13px;margin-top:5px;margin-bottom:5px;}
+ 
+ 
+ 
+ .footer{ background: none repeat scroll 0 0 #F9F9F9;
+ padding-top:20px;
+    border-top: 1px solid #E5E5E5;
+    color: #666666;
+    font-size: 13px;
+    
+    line-height: 30px;}
+ 
+ .footer a{color:#888;}
+ 
+ .simpleCart_quantitys{color:#FF7700;font-weight:600;font-size:20px;} 
+ 
+ .thumbnail {
+ 
+    padding: 0;
+  border-radius: 0px;
+}
+ 
+ /*********************min-cart*********************/
+ 
+ .panel-cart {
+    border-color: #FF7700;
+	font-size:12px;
+}
+.panel-cart > .panel-heading {
+    background-color: #FF7700;
+    border-color: #FF7700;
+    color: #FFFFFF;
+}
+.panel-cart> .panel-heading + .panel-collapse .panel-body {
+    border-top-color: #FF7700;
+	background-color: #FFf;
+}
+.panel-cart > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #FF7700;
+}
+ .btn-cart {
+    background-color: #FF7700;
+    border-color: ;
+    color: #FFFFFF;
+}
+.btn-cart:hover, .btn-cart:focus, .btn-cart:active, .btn-cart.active, .open .dropdown-toggle.btn-cart {
+    background-color: #FF7700;
+    border-color: ;
+    color: #FFFFFF;
+}
+.btn-cart:active, .btn-cart.active, .open .dropdown-toggle.btn-cart {
+    background-image: none;
+}
+.btn-cart.disabled, .btn-cart[disabled], fieldset[disabled] .btn-cart, .btn-cart.disabled:hover, .btn-cart[disabled]:hover, fieldset[disabled] .btn-cart:hover, .btn-cart.disabled:focus, .btn-cart[disabled]:focus, fieldset[disabled] .btn-cart:focus, .btn-cart.disabled:active, .btn-cart[disabled]:active, fieldset[disabled] .btn-cart:active, .btn-cart.disabled.active, .btn-cart.active[disabled], fieldset[disabled] .btn-cart.active {
+    background-color: #F0AD4E;
+    border-color: #EEA236;
+}
+.btn-cart .badge {
+    background-color: #FFFFFF;
+    color: #F0AD4E;
+}
+ 
+ 
+ 
+ 
+ 
+ /*********************
+输入框内加图标
+*********************/
+.input-icon {
+    position: relative;
+}
+.input-icon input {
+    padding-left: 33px !important;
+}
+.input-icon i {
+    color: #CCCCCC;
+    display: block;
+    font-size: 16px;
+    height: 16px;
+    margin: 11px 2px 4px 10px;
+    position: absolute;
+    text-align: center;
+    width: 16px;
+}
+.input-icon.right input {
+    padding-left: 12px !important;
+    padding-right: 33px !important;
+}
+.input-icon.right i {
+    float: right;
+    right: 8px;
+}
+
+.btn {
+    border-radius: 0 !important;
+
+}
+ 
+ /*********************
+btns
+*********************/
+.btns {
+    border-radius: 0 !important;
+    border-width: 0;
+    box-shadow: none !important;
+    font-size: 13px;
+    outline: medium none !important;
+    padding: 7px 14px;
+    text-shadow: none;
+}
+
+ .btns.default {
+    background-color: #E5E5E5;
+    color: #333333;
+    text-shadow: none;
+	
+}
+.btns.default:hover, .btns.default:focus, .btns.default:active, .btns.default.active, .btns.default[disabled], .btns.default.disabled {
+    background-color: #D8D8D8 !important;
+    color: #333333;
+    outline: medium none !important;
+}
+.btns.red {
+    background-color: #D84A38;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btns.red:hover, .btns.red:focus, .btns.red:active, .btns.red.active, .btns.red[disabled], .btns.red.disabled {
+    background-color: #BB2413 !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+.btns.blue {
+    background-color: #4D90FE;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btns.blue:hover, .btns.blue:focus, .btns.blue:active, .btns.blue.active, .btns.blue[disabled], .btns.blue.disabled {
+    background-color: #0362FD !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+.btns-group .btns.blue.dropdown-toggle {
+    background-color: #4D90FE !important;
+}
+.btns-group .btns.blue:hover, .btns-group .btns.blue:focus, .btns-group .btns.blue:active, .btns-group .btns.blue.active, .btns-group .btns.blue.disabled, .btns-group .btns.blue[disabled] {
+    background-color: #0362FD !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+.btns.green {
+    background-color: #35AA47;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btns.green:hover, .btns.green:focus, .btns.green:active, .btns.green.active, .btns.green.disabled, .btns.green[disabled] {
+    background-color: #1D943B !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+
+.btns.greens {
+    background-color: #35AA47;
+    color: #FFFFFF;
+    text-shadow: none;
+	border: 1px solid #1D943B;
+}
+.btns.greens:hover, .btns.greens:focus, .btns.greens:active, .btns.greens.active, .btns.greens.disabled, .btns.greens[disabled] {
+    background-color: #006633 !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+	border: 1px solid #1D943B;
+}
+
+  /*********************
+ico-con
+*********************/
+.icon-btn {
+   
+    color: #666 !important;
+    cursor: pointer;
+    display: inline-block !important;
+    filter: none !important;
+    height: 60px;
+    margin: 0px 5px 0 5px;
+    min-width: 60px;
+    padding: 12px 0 0;
+    position: relative;
+    text-align: center;
+    text-shadow: none !important;
+    transition: all 0.3s ease 0s !important;
+}
+.icon-btn i {
+    font-size:25px;
+	color:#FF7171;
+}
+.ie8 .icon-btn:hover {
+    filter: none !important;
+}
+.icon-btn:hover {
+    border-color: #999999 !important;
+    box-shadow: none !important;
+    color: #444444 !important;
+    text-decoration: none !important;
+    text-shadow: 0 1px 0 #FFFFFF !important;
+    transition: all 0.3s ease 0s !important;
+}
+.icon-btn:hover .badge {
+    box-shadow: none !important;
+    transition: all 0.3s ease 0s !important;
+}
+.icon-btn div {
+    color: #666;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.icon-btn .badge {
+    border-radius: 12px !important;
+    border-style: solid;
+    border-width: 0;
+    box-shadow: none;
+    color: #FFFFFF !important;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px !important;
+    font-weight: 300;
+    padding: 3px 6px;
+    position: absolute;
+    right: -5px;
+    text-shadow: none;
+    top: -5px;
+}
+
+
+.well {
+    background-color: #FAFAFA;
+    border: 1px solid #EEEEEE;
+    border-radius: 0;
+    box-shadow: none !important;
+	padding: 10px;
+	
+}

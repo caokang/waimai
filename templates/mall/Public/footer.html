@@ -1,0 +1,74 @@
+<div class="footer">
+
+<div class="container">
+
+
+<p align="center">© 2014 {$name} 　{$icp} 　　</p>
+<p align="center" class="ps">程序由<a title="超级外卖" href="http://www.bijiadao.net/">超级外卖</a>提供</p>
+</div>
+
+
+  </div>  
+    <script src="__ROOT__/Public/js/simpleCart.min.js"></script> 
+	 
+	
+
+<div class="container navbar-fixed-bottom visible-xs" style="background-color:#FFF;">
+  <div class="row ">
+  
+       <div class="col-md-3 col-xs-3"><a class="icon-btn" href="{:U('Index/index/')}">
+								<i class="fa fa-home"></i>
+								<div>首页</div>
+								
+							</a></div>
+	 <div class=" col-xs-3">
+	 <div class="btn-group dropup">
+	 <a class="icon-btn dropdown-toggle" data-toggle="dropdown" >
+								<i class="fa fa-th-large"></i>
+								<div>菜品分类</div>
+								
+							</a>
+							<ul class="dropdown-menu" style="min-width:245px;" role="menu">
+							<volist name="foodcatlist" id="vo">
+                             <li><a class="btn" href="{:U('index/flist/','id='.$vo['fcid'])}">{$vo.fcname}</a></li>
+							 <li class="divider"></li>
+							 </volist>
+							
+                             </ul>
+							</div>
+							
+							</div>
+	<div class="col-md-3 col-xs-3">
+	 <div class="btn-group dropup">
+	 <a class="icon-btn" href="{:U('Member/index/')}">
+								<i class="fa fa-user"></i>
+								<div>我的订单</div>
+								
+							</a>
+						
+							</div>
+							
+							</div>
+	 
+	 
+	 
+	
+	 <div class="col-md-3 col-xs-3">
+	 <a class="icon-btn" href="{:U('Cart/index/')}">
+								<i class="fa fa-shopping-cart"></i>
+								<div>购物车</div>
+								<span class="badge" > <span class="simpleCart_quantity "></span>
+		</span>
+							</a>
+							
+	 </div>
+  
+   <!-- <div class="col-md-3 col-xs-3"><a class="icon-btn" href="{:U('Home/map/')}">
+								<i class="fa fa-map-marker"></i>
+								<div>店铺位置</div>
+								
+							</a></div>-->
+  </div>
+
+</div>
+

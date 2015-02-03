@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>我的外卖_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+   
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+ <script src="__ROOT__/Public/js/sco.ajax.js"></script> 
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+<include file="Public:header" />
+
+
+
+<div class="container" style="margin-top:5px;min-height:500px;">
+ 
+
+ 
+<div class="row">
+     <div class=" col-lg-2 col-md-2 col-xs-12">
+	 
+	 
+  <include file="Public:mleft" />
+	
+ 
+ 
+	 
+	
+	 </div>
+	  <div class="col-lg-10 col-md-10 col-xs-12 " >
+	  
+ 
+ 
+		<div class="panel panel-default" style="min-height:500px;">
+          <div class="panel-heading">
+    <h3 class="panel-title">留言信息</h3>
+  </div>
+        <div class="panel-body">
+	
+
+ 
+	<volist name="mslist" id="vo">	 
+	   <div class="row">
+          <div class="col-sm-1"><img src="http://static11.elemecdn.com/forward/img/global/default-avatar.gif"> </div>
+		  <div class="col-sm-11">
+           <div style="color:#999">{$vo.uname}  {$vo.create_time|date="Y-m-d H:i",###}</div>		  
+		  <p>  {$vo.mcontent}</p>
+		  
+		    <volist name="vo['_child']" id="sub">
+			<hr style="margin-bottom:5px;">
+		  <p style="color:#999">回复：{$sub.mcontent}</p>
+		    </volist>
+		  </div>
+	   </div><!--list-->
+	   <hr>
+	   </volist>
+	   <div class="pagination">
+	 {$page}
+	 </div>
+         		  
+			  
+
+
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 </div>
+			 </div> 
+			 
+			 
+			 
+			 
+			 </div>
+			 </div>
+ 
+    
+</div><!-- end container -->
+ 
+
+	  
+	
+
+
+
+
+
+
+
+
+
+
+<include file="Public:footer" />	
+	
+
+
+
+	
+</body>
+<!-- END BODY -->
+</html>

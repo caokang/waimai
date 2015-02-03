@@ -1,0 +1,116 @@
+
+
+
+
+
+<div class="head_top hidden-xs" style="margin-bottom:20px;">
+  <div class="container">
+     你好，欢迎光临{$name}！
+
+ <span class="pull-right">
+ 	<empty name="uid">
+	  
+	    <a href="{:U('Public/register/')}" rel="nofollow">注册</a>
+	    <a rel="nofollow" href="/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" >登录</a>
+	     <a href="{:U('Member/index/')}" rel="nofollow">我的外卖</a>
+	<else />    
+	 <a href="{:U('Member/index/')}"><i class="fa fa-user-md"></i> <empty name="nickname">{$username}<else />{$nickname}</empty></a></li>
+	 <a href="{:U('Member/index/')}" rel="nofollow"><i class="fa fa-list"></i> 我的外卖</a>
+          <a href="{:U('Public/logout/')}" rel="nofollow"><i class="fa fa-power-off"></i> 退出</a>
+      
+</empty>
+  </span>
+  </div>
+</div>
+  
+
+  <!-- begin container -->
+  <div class="container " > 
+     <div class="row hidden-xs">
+        <div class="col-md-3 col-xs-7">
+		<a href="/"><img src="templates/mall/images/logo/logo.png"></a>
+		</div>
+		<div class="col-md-1"></div>
+        <div class="col-md-5">
+		
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-2 col-xs-5">
+		
+	
+		<empty name="uid">
+		<eq name="isorder" value="0">
+	 <a rel="nofollow" class="btn btn-cart btn-lg " style="margin-top:15px;" href="/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" ><i class="fa fa-shopping-cart"></i> 立刻结算</a>
+	     
+		<else/>
+			<a data-toggle="modal" data-target="#myModal"  class="btn btn-cart btn-lg" style="margin-top:15px;"><i class="fa fa-shopping-cart"></i> 购物车 <span class="simpleCart_quantity"></span></a> 
+
+		</eq>
+
+	<else /> 
+	<a href="{:U('Cart/index/')}" class="btn btn-cart btn-lg" style="margin-top:15px;"><i class="fa fa-shopping-cart"></i> 购物车 <span class="simpleCart_quantity"></span></a> 
+	
+	</empty>
+		</div>
+  
+      </div>
+	 
+
+
+
+
+<nav class="navbar bs-docs-nav" role="navigation" style="margin-top:10px;">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand navone hidden-xs" href="#">商品分类</a>
+  	<a class="navbar-brand visible-xs" href="#">{$name}</a>
+  	
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+	<ul class="nav navbar-nav">
+      <li><a href="/">首页</a></li>
+     
+	  <li><a href="{:U('Article/l/','id=15')}">促销</a></li>
+	  <li><a href="{:U('Gift/index/')}">积分</a></li>
+	   <li><a href="{:U('Message/index/')}">留言</a></li>
+    
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+     <empty name="uid">
+	 <li><a href="{:U('Members/index/')}">我的订单</a></li>
+     <else /> 
+	  <li><a href="{:U('Member/order/')}">我的订单</a></li>
+     
+	 </empty>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+	 
+	  
+	  
+	  
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+

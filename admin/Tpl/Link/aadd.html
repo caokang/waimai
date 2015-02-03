@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>{$webtitle}－管理后台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/css/admin.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN THEME STYLES --> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	
+
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+	 <include file="Public:header" />
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:60px">
+
+<div class="row">
+     <div class=" col-lg-2 col-md-2 col-xs-12">
+	 
+	 <include file="Public:leftsider" />
+	 
+	
+	 </div>
+	  <div class="col-lg-10 col-md-10 col-xs-12" style="background-color: #FFF;">
+	  
+        
+		
+		<!-- begin tab -->
+	      <ul class="nav nav-tabs " >
+                 <li ><a href="{:U('Link/aindex/')}" ><b>幻灯片管理</b></a></li>
+			  <li class="active"><a href="{:U('Link/aadd/')}" ><b>幻灯片增加</b></a></li>
+			
+			 
+			 
+          
+          </ul>
+		  <p></P>
+		  
+    
+           <div class="row"> 
+             <div class="col-lg-2 col-md-2 col-xs-2" ></div>
+			 <div class="col-lg-6 col-md-6 col-xs-6" ><span class="help-block"></span></div>
+			 <div class="col-lg-4 col-md-4 col-xs-4" ></div>
+		  
+		  </div>
+		  <p></P>
+
+
+
+
+
+
+   
+  
+
+<form class="form-horizontal" role="form" enctype="multipart/form-data"  method="post" action="__APP__/{$Think.MODULE_NAME}/aaddsave">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">图片名称</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="inputEmail3" name="linkname"  >
+	 
+
+    </div>
+	<div class="col-sm-4">
+<span class="help-block"> </span></span>
+ </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">链接地址</label>
+    <div class="col-sm-6">
+     
+		 <input type="text" class="form-control" id="inputEmail3" name="link"  value="http://">											
+													
+												
+	  
+						
+	  
+    </div>
+	<div class="col-sm-4"><span class="help-block">   </span></div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail8" class="col-sm-2 control-label">图片</label>
+    <div class="col-sm-4">
+      
+	 <input type="file" name="pic" id="exampleInputFile">
+
+
+    </div>
+	<div class="col-sm-6">
+<span class="help-block"> 仅支持jpg,可不设置</span>
+ </div>
+  </div>
+  <hr>
+		  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-4 control-label"></label>
+    <div class="col-sm-2">
+   
+       
+        <button type="sumbit" class="btn btn-primary">保存</button>
+ 
+	  
+    </div>
+	<div class="col-sm-6"><span class="help-block"> </div>
+  </div>
+
+  
+</form>
+
+
+			  
+	
+	
+
+			  
+			  
+			
+             
+	
+     
+
+	  
+	  
+	  
+	
+	 </div><!-- col end -->
+
+</div><!-- end row -->
+
+
+  
+
+
+    
+</div><!-- end container -->
+
+
+    
+         
+	
+
+
+	
+<!-- /.modal -->
+
+
+
+				
+				
+			
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->   
+
+	<!-- 配置文件 -->
+
+	
+	
+    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+
+
+
+
+
+
+<script >
+	
+	$('#myModal').on('hidden.bs.modal', function (e) {
+	location.reload()
+
+})
+$('#ajax').on('hidden.bs.modal', function (e) {
+	location.reload()
+
+})
+
+
+function delcfm() {
+if (!confirm("确认要删除？")) {
+window.event.returnValue = false;
+}
+}
+
+
+
+
+</script>	
+
+	<!-- END CORE PLUGINS -->
+	
+	<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

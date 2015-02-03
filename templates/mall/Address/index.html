@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>我的外卖_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+   <!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN THEME STYLES --> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+		    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+ <script src="__ROOT__/Public/js/sco.ajax.js"></script> 
+	 
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+
+
+<include file="Public:header" />
+
+<div class=" container " style="margin-top:10px;min-height:500px;">
+
+<div class="row">
+     <div class=" col-lg-2 col-md-2 col-xs-12">
+	 
+	   <include file="Public:mleft" />
+	 
+	
+	 </div>
+	  <div class="col-lg-10 col-md-10 col-xs-12 " >
+	  
+ <div class="panel panel-default">
+       	         <div class="panel-heading">
+    <h3 class="panel-title">地址管理</h3>
+  </div>
+        <div class="panel-body">
+	
+
+
+	<p>	<a href="{:U('Address/add/')}" data-toggle="modal" data-target="#myModal" class="btns green pull-right" >增加地址</a></p>
+
+         <table class="table ta">
+        <thead>
+          <tr>
+            <th>收货人</th>
+            <th>手机号</th>
+            <th>地址</th>
+            <th>状态</th>
+			<th>操作</th>
+          </tr>
+        </thead>
+        <tbody style="font-size:12px;">
+		<volist name="adlist" id="vo">
+          <tr>
+            <td>{$vo.name}</td>
+            <td>{$vo.tel}</td>
+            <td>{$vo.address}</td>
+			<td>
+			<eq name="vo.addtop" value="1">默认<else/></eq>
+
+			
+			</td>
+          <td>
+			<a href="{:U('Address/del/','id='.$vo['faddid'])}" >删除</a>
+			<eq name="vo.addtop" value="1"><else/>
+			<a href="{:U('Address/addtop/','id='.$vo['faddid'])}" >默认地址</a>
+			
+			</eq>
+
+			</td>
+           
+          </tr>
+		  </volist>
+     
+        </tbody>
+      </table>
+	   
+	  
+        </div>
+      </div>
+	    <div class="row">
+					  <div class="col-md-7 col-sm-12">
+					  </div>
+					  <div class="col-md-5 col-sm-12">
+					          
+
+                              <ul class="pagination pull-right">
+							    {$page}
+                                
+                             </ul>
+
+
+					  </div>
+					  
+					  
+					  </div>
+			 
+		
+			 
+			 
+			 
+			 
+			 	 
+ 
+ 
+ 
+
+
+			 </div> 
+			 
+			 
+			 
+			 
+		
+			 </div>
+
+    
+</div><!-- end container -->
+
+
+
+<include file="Public:footer" />	
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+</div><!-- /.modal -->	 
+   
+ 
+
+</body>
+<!-- END BODY -->
+</html>

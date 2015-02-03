@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>{$webtitle}－管理后台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/css/admin.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+	 <include file="Public:header" />
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:60px">
+
+<div class="row">
+  
+	  <div class="col-lg-12 col-md-12 col-xs-12" style="background-color: #FFF;">
+	  
+        
+		
+		<!-- begin tab -->
+	     <ul class="nav nav-tabs " >
+             <li ><a href="{:U('Order/index/')}" ><b>订单列表</b></a></li>		 
+			 <li class="active"><a href="#" ><b>订单详情</b></a></li>		 
+			 
+			
+              
+          </ul>
+		  <p></P>
+		  
+    
+           <div class="row"> 
+             <div class="col-lg-2 col-md-2 col-xs-2" ></div>
+			 <div class="col-lg-6 col-md-6 col-xs-6" ><span class="help-block"></span></div>
+			 <div class="col-lg-4 col-md-4 col-xs-4" ></div>
+		  
+		  </div>
+		  <p></P>
+<div class="panel panel-default">
+  <div class="panel-heading">基本信息</div>
+  <div class="panel-body">
+  <div class="row">
+   <div class="col-md-6">
+   <p>订单号：{$odetail.oid}</p>
+<p>下单人：{$odetail.oid}</p>
+<p>店铺名：{$odetail.oid}</p>
+
+<p>创建时间：{$vo.order_ctime|date="Y-m-d H:i",###}</p>
+<p>完成时间：<empty name="odetail.order_endtime">
+											<else /> {$odetail.order_endtime|date="Y-m-d H:i",###}	</empty></p>
+</div>	
+	
+<div class="col-md-6">	
+	 <p>收货人：{$odetail.name}</p>
+	<p>收货手机号：{$odetail.tel}</p>
+	<p>收货地址：{$odetail.address}</p>
+	<p>收货备注：{$odetail.addcontent}</p>
+	
+	</div>	
+	
+	</div>
+
+	<hr>
+																		<switch name="odetail.orderstatus" >
+<case value="0" > <a class="btn btn-primary btn-xs" href="{:U('Order/orderone/','id='.$vo['oid'])}" >确认</a> <a class="btn btn-default btn-xs" href="{:U('Order/ordersix/','id='.$vo['oid'])}" >无效</a> </case>
+<case value="1">  <a class="btn btn-primary btn-xs" href="{:U('Order/ordertwo/','id='.$vo['oid'])}" >出单</a>  </case>
+<case value="2"><a class="btn btn-primary btn-xs" href="{:U('Order/orderthree/','id='.$vo['oid'])}" >送货</a> </case>
+<case value="3"><a class="btn btn-primary btn-xs" href="{:U('Order/orderfour/','id='.$vo['oid'])}" >完成</a> </case>
+<case value="4"></case>
+<case value="5"></case>
+<case value="6"></case>
+<default />默认情况
+</switch>
+	</div>									
+ 
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">订单明细  　　　订单数量：{$odetail.ordercount}　订单金额：{$odetail.orderprice}</div>
+  <div class="panel-body">
+  
+
+<table class="table table-bordered">
+
+   
+  <tbody>
+            <tr>
+              <td>名称</td>
+              <td>单价</td>
+              <td>数量</td>
+              <td>总额</td>
+              
+            </tr>
+          <volist name="orderextlist" id="vo">
+		  <tr>
+              <td> {$vo.fname}</td>
+              <td>{$vo.fprice}</td>
+              <td>{$vo.fcount}</td>
+              <td>{$vo.prices}</td>
+              
+            </tr>
+   
+   </volist> 
+		   
+		   
+		   
+		   
+          </tbody> 
+ 
+</table> 
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+	
+	
+	 </div><!-- col end -->
+
+</div><!-- end row -->
+
+
+  
+
+
+    
+</div><!-- end container -->
+
+
+    
+         
+
+</body>
+<!-- END BODY -->
+</html>

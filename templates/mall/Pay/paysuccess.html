@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>订单支付成功_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+		<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+
+		    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	 <script type="text/javascript" src="__ROOT__/Public/js/simpleCart.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                simpleCart.empty();
+            })
+        </script>
+
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<include file="Public:heade" />
+
+   
+         
+<!-- begin container -->
+
+<div class="container" style="margin-top:5px;min-height:500px;">
+
+<div class="row">
+<div class="col-lg-3 col-md-3"> </div>
+	  <div class="col-lg-6 col-md-6 col-xs-12">
+	  <!-- shopstart-->
+	      <div class="panel panel-default">
+		      <div class="panel-heading">
+    <h3 class="panel-title">支付提示</h3>
+  </div>
+             <div class="panel-body"style="min-height:300px;">
+         
+	         
+		
+				<p align="center" style="font-size:30px;"> 
+				<i class="fa fa-check-circle-o" style="color:#1D943B;font-size:30px;margin-top:30px;"></i>
+				　您的订单支付成功！</p>
+				<p align="center">您可以去查看　<a href="{:U('Member/order/')}">我的订单</a></p>
+			
+			 
+			 <br>
+
+	 
+			 
+			 
+			 
+			 
+			  </div>
+ 
+			 
+			 </div>
+	         </div>
+	 </div><!-- col end -->
+    
+
+</div><!-- end row -->
+
+
+  
+
+</div>
+    
+</div><!-- end container -->
+
+
+
+<include file="Public:footer" />	
+
+
+<!-- /.modal -->
+
+				
+
+
+
+	
+
+	
+	
+	
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->   
+
+	<!-- 配置文件 -->
+
+	
+
+
+
+
+
+
+
+
+
+  
+	<!-- END CORE PLUGINS -->
+	
+	<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

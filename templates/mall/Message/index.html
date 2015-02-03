@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>在线留言_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="{key}" name="description" />
+	<meta content="{des}" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+  <include file="Public:header" />
+  
+    <!-- begin container -->
+  <div class="container">
+      
+         <div class="row">
+             <div class="col-md-3">
+<include file="Public:cleft" />	 
+			 
+			 
+			 
+			 </div>
+			 <div class="col-md-9 ">
+			 
+
+
+
+<div class="btn-group " style="margin-top:10px;">
+  <button type="button" class="btn btn-warning">全部留言</button>
+  <empty name="uid">
+		<a class="btn btn-warning " href="{:U('Public/login/')}" rel="nofollow">
+ <span class="glyphicon glyphicon-plus"></span> 发表留言
+</a>
+	
+	<else /> 
+	
+	<button class="btn btn-warning " data-toggle="modal" data-target="#myModalss">
+ <span class="glyphicon glyphicon-plus"></span> 发表留言
+</button>
+	</empty>
+
+  </div>
+
+
+	  <div class="panel panel-default">
+             <div class="panel-body">
+		
+
+
+
+
+			 
+		<volist name="mslist" id="vo">	 
+	   <div class="row">
+          <div class="col-sm-1"><img src="http://static11.elemecdn.com/forward/img/global/default-avatar.gif"> </div>
+		  <div class="col-sm-11">
+           <div style="color:#999">{$vo.uname}  {$vo.create_time|date="Y-m-d H:i",###}</div>		  
+		  <p>  {$vo.mcontent}</p>
+		  
+		    <volist name="vo['_child']" id="sub">
+			<hr style="margin-bottom:5px;">
+		  <p style="color:#999">回复：{$sub.mcontent}</p>
+		    </volist>
+		  </div>
+	   </div><!--list-->
+	   <hr>
+	   </volist>
+	   <div class="pagination">
+	 {$page}
+	 </div>
+	   </div></div><!--panel-body-->
+			
+
+
+ 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+			
+			 
+	
+			 
+			 </div>
+		
+			 
+		</div>
+ 
+   </div>
+   
+  
+ <!-- begin container -->
+
+
+<include file="Public:foot" />
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModalss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">发表留言</h4>
+      </div>
+      <div class="modal-body">
+       
+
+<form class="form-horizontal" role="form" method="post" action="{:U('Message/save/')}">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">内容</label>
+    <div class="col-sm-9">
+       
+
+<textarea class="form-control" rows="5" name="content"></textarea>
+
+
+	</div>
+  </div>
+  
+  
+  
+
+
+
+      </div>
+      <div class="modal-footer">
+       <button type="submit" class="btn btn-primary">提交留言</button>
+      </div>
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->	
+	
+	
+	
+  	
+
+
+	<!-- copy right:超级外卖  www.bijiadao.net-->
+</body>
+<!-- END BODY -->
+</html>

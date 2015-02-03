@@ -1,0 +1,30 @@
+/******************购物车标准版
+*********************/
+
+.headerRow{background-color:#F6F6F6;height:40px;padding:10px;}
+.headerRow .item-name{float:left;width:100px;}
+.headerRow .item-price{float:left;margin-right:5px;width:27px;}
+.headerRow .item-decrement{float:left;margin-left:10px;width:10px;}
+.headerRow .item-increment{float:left;margin-right:20px;margin-left:15px;width:5px;}
+.headerRow .item-quantity{float:left;margin-left:20px;width:45px;}
+.headerRow .item-total{float:left;margin-left:10px;margin-right:5px;width:25px;}
+.headerRow .item-remove{float:left;width:30px;}
+.itemRow{clear:both;height:20px;padding:10px;}
+.itemRow .item-name{float:left;width:100px;}
+.itemRow .item-price{float:left;margin-left:2px;width:35px;}
+.itemRow .item-decrement{float:left;margin-left:8px;margin-right:5px;width:10px;}
+.itemRow .simpleCart_decrement{border-radius: 3px;font-size: 12px;line-height:12px;padding: 0px 6px; background-color: #FFFFFF;border:1px solid #CCCCCC;color: #333333;}
+.itemRow .item-increment{float:left;margin-right:5px;margin-left:5px;width:8px;}
+.itemRow .simpleCart_increment{border-radius: 3px;font-size: 12px;line-height:12px;padding: 0px 5px; background-color: #FFFFFF;border:1px solid #CCCCCC;color: #333333;}
+
+.itemRow .item-quantity{float:left;width:20px;padding:0px 8px 0px 8px ;}
+.itemRow .item-total{float:left;margin-right:1px;margin-left:17px;width:35px;color: #D84A38;font-weight:600;}
+.itemRow .item-remove{float:left;margin-left:15px;width:10px;}
+.count{padding-left:30px;margin-top:5px;}
+.count .simpleCart_quantity{margin-left:40px;}
+.ship{padding-left:30px;margin-top:5px;}
+.ship .simpleCart_shipping{margin-left:20px;}
+.grand{padding-left:30px;margin-top:5px;}
+.grand .simpleCart_grandTotal{margin-left:8px;color: #D84A38;font-weight:600;font-family: arial;font-size:14px;}
+  /******************外卖css 改动
+*********************/

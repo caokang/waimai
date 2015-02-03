@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>我的外卖_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+		<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN THEME STYLES --> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+  
+ 
+
+
+<include file="Public:header" />
+
+
+    
+         
+<!-- begin container -->
+
+<div class="container" style="margin-top:10px">
+<div class="panel panel-default" style="min-height:600px">
+  <div class="panel-body">
+<div class="row">
+ <div class=" col-lg-12 col-md-12 col-xs-12">
+	    
+		
+		
+	  
+	  
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ <form class="form-horizontal" role="form"  method="post" action="{:U('Members/myorders/')}">
+
+<div class="row">
+<div class="col-lg-4"></div>
+  <div class="col-lg-4">
+  <p class="help-block">请输入你的订餐手机号</p>
+    <div class="input-group">
+
+      <input type="text" class="form-control" name="id">
+	        <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">查询</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-4">
+
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+</form>
+<div class="row">
+<div class="col-lg-4"></div>
+  <div class="col-lg-4">
+  <div class="help-block">
+  <br>
+  手机号只能查当天的订单,若查询更多订单，请注册.<br>
+若您的手机号查询不到订单，请联系客服。<br>
+请不要重复下单，否则会进入黑名单。<br>
+
+										</div>
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-4">
+
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<br><br><br>
+	 </div>
+			 </div>		 
+			 
+			
+
+   </div>
+			 </div>  
+</div><!-- end container -->
+
+
+
+<include file="Public:footer" />	
+
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+
+</body>
+<!-- END BODY -->
+</html>

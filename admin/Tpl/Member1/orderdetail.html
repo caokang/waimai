@@ -1,0 +1,62 @@
+<div class="panel panel-default">
+  
+        <div class="panel-body">
+		<h2 class="panel-title">订单详情</h2>
+		<br>
+		
+		<div class="row">
+		     <div class="col-md-4">
+			
+			 <p>订单编号：{$orderdetail.oid}</p>
+			 <p>下单时间：{$orderdetail.order_ctime|date="Y-m-d H:i",###}</p>
+			 <p>送达时间：{$orderdetail.order_dtime}</p>
+			 <p>完成时间：<empty name="orderdetail.order_endtime"><else /> {$orderdetail.order_endtime|date="Y-m-d H:i",###}</empty>
+</p>
+			 
+			 <p>客户姓名：{$orderdetail.oman}</p>
+			 <p>手机号码：{$orderdetail.otel}</p>
+			 <p>收货地址：{$orderdetail.oaddress}</p>
+			 <p>订单备注：{$orderdetail.morecontent}</p>
+			 
+			 </div>
+			 <div class="col-md-8">
+			<div class="panel panel-default">
+            <div class="panel-heading">
+              <b>商户：</b>{$orderdetail.shopname}　<span class="pull-right">订单状态：<span class="orderd"><switch name="vo.orderstatus">
+			
+                                            <case value="4"> 已完成   </case>
+													<case value="5">送货中   </case>
+                                                    <default /> 提交成功
+                                                   </switch></span></span>
+            </div>
+        <div class="panel-body">
+			 
+			   <table class="table tp">
+         <thead>
+          <tr>
+            <td >  菜品</td>
+            <td >  单价</td>
+            <td >  数量</td>
+            <td>  小计</td>
+			<td></td>
+          </tr>
+         </thead>
+       <volist name="orderdetail.Foodorderext" id="vo">	
+          <tr>
+            <td >  {$vo.fname}</td>
+			<td >  {$vo.fprice}</td>
+            <td >{$vo.fcount}</td>
+			<td >{$vo.prices}</td>
+       </tr>
+		  </volist>
+          
+     
+        
+      </table>
+	   </div>
+	   <div class="panel-footer">配送费用：<span class="orderd">{$orderdetail.shopspay}</span>元　　订单总额：<span class="orderd">{$orderdetail.orderprice}</span>元</div>
+			 </div>
+			 </div>
+		</div>
+			   </div>
+			    </div>

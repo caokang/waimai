@@ -1,0 +1,30 @@
+/******************购物车标准版
+*********************/
+
+.headerRow{background-color:#F6F6F6;height:40px;padding:10px;}
+.headerRow .item-name{float:left;width:20%;}
+.headerRow .item-price{float:left;margin-right:10px;width:22%;}
+.headerRow .item-decrement{float:left;margin-left:10px;width:10%;}
+.headerRow .item-increment{float:left;margin-right:20px;margin-left:5px;width:1%;}
+.headerRow .item-quantity{float:left;margin-left:5px;width:26%;}
+.headerRow .item-total{float:left;margin-right:25px;width:20%;}
+.headerRow .item-remove{float:left;width:3%;}
+.itemRow{clear:both;height:20px;padding:10px;}
+.itemRow .item-name{float:left;width:20%;}
+.itemRow .item-price{float:left;margin-right:5px;width:20%;}
+.itemRow .item-decrement{float:left;margin-left:10px;margin-right:10px;width:1%;}
+.itemRow .simpleCart_decrement{border-radius: 3px;font-size: 12px;line-height:12px;padding: 0px 6px; background-color: #FFFFFF;border:1px solid #CCCCCC;color: #333333;}
+.itemRow .item-increment{float:left;margin-right:20px;margin-left:5px;width:20%;}
+.itemRow .simpleCart_increment{border-radius: 3px;font-size: 12px;line-height:12px;padding: 0px 5px; background-color: #FFFFFF;border:1px solid #CCCCCC;color: #333333;}
+
+.itemRow .item-quantity{float:left;width:3%;padding:0px 8px 0px 8px ;}
+.itemRow .item-total{float:left;width:15%;color: #D84A38;font-weight:600;}
+.itemRow .item-remove{float:left;width:10%;}
+.count{padding-left:30px;margin-top:5px;}
+.count .simpleCart_quantity{margin-left:40px;}
+.ship{padding-left:30px;margin-top:5px;}
+.ship .simpleCart_shipping{margin-left:20px;}
+.grand{padding-left:30px;margin-top:5px;}
+.grand .simpleCart_grandTotal{margin-left:8px;color: #D84A38;font-weight:600;font-family: arial;font-size:14px;}
+  /******************外卖css 改动
+*********************/

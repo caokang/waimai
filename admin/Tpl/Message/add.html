@@ -1,0 +1,38 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">留言回复</h4>
+      </div>
+      <div class="modal-body">
+       
+
+
+<form class="form-horizontal" role="form" action="{:U('Message/save/')}" method="post">
+
+<input type="hidden" class="form-control" name="uid"  value="{$mitem.uid}">
+<input type="hidden" class="form-control" name="pid"  value="{$mitem.msid}">
+<p> 内容： 
+
+<textarea class="form-control" name="content" rows="3"></textarea>
+
+</p> 
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">回复</button>
+    </div>
+  </div>
+ 
+ 
+
+</div>
+
+      </div>
+  
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  
+ 

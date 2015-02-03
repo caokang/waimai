@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><!-- copy right:超级外卖  www.bijiadao.net-->
+<head>
+	<meta charset="utf-8" />
+	<title>{$aitem.aname}_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	
+	<link href="__ROOT__/templates/mall/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/templates/mall/css/css.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+	    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+	 <include file="Public:header" />
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:5px;">
+
+
+    
+</div><!-- end container -->
+
+
+ <!-- begin container -->
+  <div class="container">
+      
+         <div class="row">
+             <div class="col-md-3">
+			<include file="Public:cleft" />
+	
+	<div class="list-group" >
+<volist name="articlelist" id="vo">
+  <a href="{:U('Article/l/','id='.$vo['acid'])}" class="list-group-item list-border">
+    {$vo.aname}
+  </a>
+</volist>
+</div>	
+			 
+			 
+			 
+			 </div>
+			 <div class="col-md-9 ">
+			 
+			  
+			   
+         <div class="panel panel-default" style="min-height:400px">
+  
+    <div class="panel-heading">
+    <h3 class="panel-title">{$aitem.aname}</h3>
+  </div>
+  
+  <div class="panel-body">
+
+
+	
+
+ <p align="center" style="font-size:18px;margin-top:15px;"><b>{$item.atitle} <small></small></b></p>
+	<div style="font-size:14px;">		  
+			 {$item.content|htmlspecialchars_decode}
+             
+	
+     </div>
+
+             
+	
+     
+
+	  
+	  
+	  
+	
+	
+
+
+
+
+  
+</div></div>
+
+ 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+			
+			 
+	
+			 
+			 </div>
+		
+			 
+		</div>
+ 
+   </div>
+   
+  
+ <!-- begin container -->
+
+
+
+	<include file="Public:foot" />			
+				
+			
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+</body>
+<!-- END BODY -->
+</html>

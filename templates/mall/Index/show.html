@@ -1,0 +1,43 @@
+
+ 
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">{$fooditem.fname}</h4>
+      </div>
+      <div class="modal-body">
+	  
+	 		<div class="row top5" >
+             	  <div class="col-md-6 ">
+  <div class="thumbnail">
+ <img src="{$fooditem.fpic}" class="img-responsive">
+		</div>
+             </div>
+			   <div class="col-md-6 simpleCart_shelfItem">
+			   
+<h1 style="font-size:20px;" class="item_name">{$fooditem.fname}</h1>
+ <hr> 
+<div class="well "> 
+	<p>价格：<span class="item_price" style="color:#FF7700;font-weight:600;font-size:14px"> {$fooditem.fprice} </span></P>
+		
+	<p>数量：<input style="padding:5px 5px 5px 10px;width:40px;" value="1" size="2" class="item_Quantity" type="text"></P>
+    
+	<p>	<span class="pull-right "><a  href="javascript:;" class="btn btn-warning  item_add"><i class="fa fa-shopping-cart"></i> 加入购物车</a> </span></P>
+	<div class="clearfix"></div>
+</div>		
+			 </div>
+            </div>	 
+	  
+	  
+
+	  
+	  
+	  <hr>
+	 
+       <p>{$fooditem.fcontent}</p>
+		
+      </div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->

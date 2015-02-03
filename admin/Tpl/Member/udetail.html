@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>{$webtitle}－管理后台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/css/admin.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+	
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+	 <include file="Public:header" />
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:60px">
+
+<div class="row">
+    
+	  <div class="col-lg-12 col-md-12 col-xs-12" style="background-color: #FFF;">
+	  
+        
+		
+		<!-- begin tab -->
+	      <ul class="nav nav-tabs " >
+             <li><a href="{:U('Member/index/')}" ><b>会员管理</b></a></li>
+			 <li class="active"><a href="{:U('Member/index/')}" ><b>会员详情</b></a></li>
+			 
+			 <li ><a href="{:U('Member/indexw/')}" ><b>黑名单</b></a></li>
+              <li ><a href="{:U('Member/adminindex/')}" ><b>管理员</b></a></li>
+             <li><a href="{:U('Member/adminadd/')}" ><b>管理员增加</b></a></li>
+          </ul>
+		  <p></P>
+		  
+    
+           <div class="row"> 
+             <div class="col-lg-2 col-md-2 col-xs-2" ></div>
+			 <div class="col-lg-6 col-md-6 col-xs-6" ><span class="help-block"></span></div>
+			 <div class="col-lg-4 col-md-4 col-xs-4" ></div>
+		  
+		  </div>
+		  <p></P>
+
+
+
+
+			 
+<table class="table table-bordered">
+
+        <tbody>
+          <tr>
+           
+           
+            <td>
+				<p><b>用户名：</b>{$sdetail.sname}	</p>  
+	<p><b>呢称:</b>{$sdetail.qq}	 	</p>  
+	<p>  <b>email:</b>{$sdetail.email}		</p>  
+	<p><b>城市：</b>{$sdetail.address}	　	</p>  
+     <p><b>付款帐户：</b>{$sdetail.pay}	{$sdetail.payname}	　{$sdetail.tel}	</p><hr>
+	  <p><b>星座：</b>{$sdetail.star}	</p>
+	  <p><b>爱好：</b>{$sdetail.love}	</p>
+	  <p><b>职业：</b>{$sdetail.job}	</p>
+	  <p><b>男生评价：</b>{$sdetail.boy}	</p><hr>
+
+			
+			
+			
+			</td>
+            <td></td>
+          </tr>
+            <tr>
+           
+            <td></td>
+            <td>
+		
+           
+          </tr>
+           <tr>
+		 
+		   </tr>
+		  
+        </tbody>
+      </table>
+
+
+
+	
+	
+	 </div><!-- col end -->
+
+</div><!-- end row -->
+
+
+  
+
+
+    
+</div><!-- end container -->
+
+
+    
+         
+
+</body>
+<!-- END BODY -->
+</html>

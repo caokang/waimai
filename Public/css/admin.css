@@ -1,0 +1,298 @@
+/*********************
+ 自定模板 
+*********************/
+body{ background-color: #F1F1F1;color: #333; 
+  font-family: arial,"宋体";
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size:13px; }
+
+  
+ .top{margin-top:55px; }
+ .bt-m-m{margin:10px 5px 10px 5px;}
+ .row-margin{margin:0px;}
+ 
+ 
+ 
+ 
+  /*********************
+navbar
+*********************/
+
+
+
+
+.navbar-default {
+    background-color: #FF9900;
+	 background-image: -moz-linear-gradient(center top , #FF9900, #FF9900);
+    border-color: #FF9900;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+.navbar-default .navbar-collapse {
+    border-color: #FF9900;
+}
+.navbar-default .navbar-brand {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav  .nli > a >i{
+    color: #fff;
+	font-size:20px;
+	
+}
+.navbar-default .navbar-nav  .nli > a {
+    color: #fff;
+	font-size:14px;
+	padding: 12px 10px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+background-color: #CC6600;
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover {
+    background-color: #FF9900;
+    color: #FFFFFF;
+}
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-default.navbar-toggle:hover {
+    background-color: #D67632;
+    border-color: #D67632;
+}
+
+ /*********************
+left-con
+*********************/
+.leftsider{width:225px;}
+
+.leftsider a { color: #333;text-decoration: none;}
+.leftsider span { margin-right:15px}
+.help-block {
+    color: #aaa;
+
+}
+
+
+
+.well {
+    background-color: #FAFAFA;
+    border: 1px solid #EEEEEE;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+
+
+
+
+
+
+ /*********************
+输入框内加图标
+*********************/
+.input-icon {
+    position: relative;
+}
+.input-icon input {
+    padding-left: 33px !important;
+}
+.input-icon i {
+    color: #CCCCCC;
+    display: block;
+    font-size: 16px;
+    height: 16px;
+    margin: 11px 2px 4px 10px;
+    position: absolute;
+    text-align: center;
+    width: 16px;
+}
+.input-icon.right input {
+    padding-left: 12px !important;
+    padding-right: 33px !important;
+}
+.input-icon.right i {
+    float: right;
+    right: 8px;
+}
+
+
+ 
+ /*********************
+btn
+*********************/
+.btns {
+    border-radius: 0 !important;
+    border-width: 0;
+    box-shadow: none !important;
+    font-size: 14px;
+    outline: medium none !important;
+    padding: 7px 14px;
+    text-shadow: none;
+}
+
+ .btns.default {
+    background-color: #E5E5E5;
+    color: #333333;
+    text-shadow: none;
+}
+.btns.default:hover, .btns.default:focus, .btns.default:active, .btns.default.active, .btns.default[disabled], .btns.default.disabled {
+    background-color: #D8D8D8 !important;
+    color: #333333;
+    outline: medium none !important;
+}
+.btns.red {
+    background-color: #D84A38;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btns.red:hover, .btns.red:focus, .btns.red:active, .btns.red.active, .btns.red[disabled], .btns.red.disabled {
+    background-color: #BB2413 !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+.btns.blue {
+    background-color: #4D90FE;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btns.blue:hover, .btns.blue:focus, .btns.blue:active, .btns.blue.active, .btns.blue[disabled], .btns.blue.disabled {
+    background-color: #0362FD !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+.btns-group .btns.blue.dropdown-toggle {
+    background-color: #4D90FE !important;
+}
+.btns-group .btns.blue:hover, .btns-group .btns.blue:focus, .btns-group .btns.blue:active, .btns-group .btns.blue.active, .btns-group .btns.blue.disabled, .btns-group .btns.blue[disabled] {
+    background-color: #0362FD !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+.btns.green {
+    background-color: #35AA47;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btns.green:hover, .btns.green:focus, .btns.green:active, .btns.green.active, .btns.green.disabled, .btns.green[disabled] {
+    background-color: #1D943B !important;
+    color: #FFFFFF !important;
+    outline: medium none !important;
+}
+
+ 
+
+/**********win8界面***************/
+
+
+#dashboard {
+    overflow: hidden;
+}
+.dashboard-stat {
+    margin-bottom: 25px;
+}
+.dashboard-stat:before, .dashboard-stat:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.dashboard-stat:after {
+    clear: both;
+}
+.dashboard-stat .visual {
+    display: block;
+    float: left;
+    height: 80px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 80px;
+}
+.dashboard-stat .visual i {
+    color: #FFFFFF;
+    font-size: 42px;
+    line-height: 45px;
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+.dashboard-stat .visual i {
+    font-size: 28px;
+    line-height: 28px;
+}
+}
+.dashboard-stat .details {
+    padding-right: 10px;
+    position: absolute;
+    right: 15px;
+}
+.dashboard-stat .details .number {
+    color: #FFFFFF;
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 34px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    text-align: right;
+}
+.dashboard-stat .details .desc {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: right;
+}
+.dashboard-stat .more {
+    clear: both;
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+.dashboard-stat .more:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+.dashboard-stat .more > i {
+    display: inline-block;
+    float: right;
+    margin-top: 1px;
+}
+.dashboard-stat.blue {
+    background-color: #27A9E3;
+}
+.dashboard-stat.blue .more {
+    background-color: #208DBE;
+}
+.dashboard-stat.green {
+    background-color: #28B779;
+}
+.dashboard-stat.green .more {
+    background-color: #10A062;
+}
+.dashboard-stat.red {
+    background-color: #E7191B;
+}
+.dashboard-stat.red .more {
+    background-color: #BC0D0E;
+}
+.dashboard-stat.yellow {
+    background-color: #FFB848;
+}
+.dashboard-stat.yellow .more {
+    background-color: #CB871B;
+}
+.dashboard-stat.purple {
+    background-color: #852B99;
+}
+.dashboard-stat.purple .more {
+    background-color: #6E1881;
+}
+
+
+
