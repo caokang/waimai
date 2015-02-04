@@ -28,11 +28,7 @@
         <script src="__ROOT__/Public/js/respond.min.js"></script>
     <![endif]-->
 	<!-- END THEME STYLES -->
-	
-	
 
-
-	
 </head>
 <!-- BEGIN BODY -->
 <body>
@@ -48,9 +44,7 @@
 <div class="row">
  
 	  <div class="col-lg-12 col-md-12 col-xs-12" style="background-color: #FFF;">
-	  
-        
-		
+
 		<!-- begin tab -->
 	      <ul class="nav nav-tabs " >
 		  
@@ -60,12 +54,10 @@
 		
 		<eq name="cate" value="6"><li class="active"><a href="__APP__?m=Config&a=index&id=6" ><b>邮件设置</b></a></li><else/> <li class=""><a href="__APP__?m=Config&a=index&id=6"><b>邮件设置</b></a></li></eq>
 		  <eq name="cate" value="5"><li class="active"><a href="__APP__?m=Config&a=index&id=5" ><b>授权设置</b></a></li><else/> <li class=""><a href="__APP__?m=Config&a=index&id=5"><b>授权设置</b></a></li></eq>
-		 
 
           </ul>
 		  <p></P>
-		  
-    
+
            <div class="row"> 
              <div class="col-lg-2 col-md-2 col-xs-2" ></div>
 			 <div class="col-lg-6 col-md-6 col-xs-6" ><span class="help-block"></span></div>
@@ -74,10 +66,6 @@
 		  </div>
 		  <p></P>
 
-
-
-
-			 
 <form class="form-horizontal"role="form" enctype="multipart/form-data" action="__APP__?m=Config&a=add" method="post">
 <input type="hidden" class="form-control" name="cate" value="{$cate}">
 <volist name="citem" id="vo">
@@ -93,10 +81,8 @@
 <textarea class="form-control" name="{$vo.name}" rows="2">{$vo.value}</textarea>
 	 </case>
 	 <case value="5">      
-  <input type="file" name="pic" id="">
+  <input type="file" name="pic" id="" value=""><img alt="{$vo.value}" src="__ROOT__{$vo.value}" title="{$vo.name}">
 	 </case>
-	 
-	
 	 <case value="3">
       
 					<volist name="vo[extra]" id="group">
@@ -116,15 +102,11 @@
 <else /> <option value="{$key}">{$group}</option>
 </if>
 
-					
-						
-						
 					</volist>
 				</select>
    
 	 </case>
-	 
-	 
+
 	</switch>
     </div>
 	<div class="col-sm-6">
@@ -132,10 +114,7 @@
  </div>
   </div>
 </volist>
-  
-  
-  
-   
+
   
 <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -145,49 +124,20 @@
 
       </div>
       </form>
-	
 
-			  
-			  
-			
-             
-	
-     
-
-	  
-	  
-	  
 	
 	 </div><!-- col end -->
 
 </div><!-- end row -->
 
-
-  
-
-
-    
 </div><!-- end container -->
-
-
-    
-         
-	
 
 
 <include file="Public:foot" />	
 
 	
-	
     <script src="__ROOT__/Public/js/jquery.js"></script>
     <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
-	
-
-
-
-
-
-
 
 	<!-- END CORE PLUGINS -->
 	
