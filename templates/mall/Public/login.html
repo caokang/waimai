@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
@@ -33,27 +32,17 @@
 	
 </head>
 <!-- BEGIN BODY -->
-<body style="background:url(/Public/images/regbg.jpg) no-repeat scroll center top #DBF1FC;">
+<body style="background:url(__ROOT__/Public/images/regbg.jpg) no-repeat scroll center top #DBF1FC;">
 
 
 <div class="container" style="min-height: 350px;padding-top:10px" >
-<a href="/">
-<p align="center"><img src="{$logo}"></p>
-</a>
-  
+	<p align="center"><a href="__ROOT__"><img src="__ROOT__{$logo}" ></a></p>
   <div class="row">
   
-    
-
-	
 	    <div class=" col-lg-4 col-xs-12">
 
-		
-	
-
 		</div><!-- end col-8-->
-		
-		
+
 		<div class="col-lg-4 col-xs-12">
 		
 <div class="panel panel-default">
@@ -99,93 +88,15 @@
    
   </div>
 </div>		
-		
-
- 
- 
- 
- 
- 
- 
- 
-		
-		
-		
-		
-		
-		
-		
-
-
-
-              
-
-        
-		
-	
-		
-
-		
 		</div><!-- end col-4-->
 		
-		
 		<div class=" col-lg-4 col-xs-7"></div>
-		
-		
-		
       </div><!-- end row -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   
-
-
-
-	
-	  
 	  
 </div><!-- end container -->
 <p style="text-align:center"></p>
 
 
-    
-         
-	
-
-
-			
-			
-			
-		
-			
-				
-				
-				
-			
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<!-- END FOOTER -->
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 	<!-- BEGIN CORE PLUGINS -->   
@@ -199,10 +110,7 @@
     <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
 	<script src="__ROOT__/Public/js/Validform_v5.3.2_min.js"></script> 
 <script >
-	
-
-
-	$(function(){
+$(function(){
 	//$(".registerform").Validform();  //就这一行代码！;
 		
 	$(".orm-horizontal").Validform({
@@ -214,8 +122,6 @@
 		ajaxPost:true
 	});
 })
-	
-
 </script>	
 
 	<!-- END CORE PLUGINS -->

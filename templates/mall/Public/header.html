@@ -1,17 +1,12 @@
 
-
-
-
-
 <div class="head_top hidden-xs" style="margin-bottom:20px;">
   <div class="container">
      你好，欢迎光临{$name}！
-
  <span class="pull-right">
  	<empty name="uid">
 	  
 	    <a href="{:U('Public/register/')}" rel="nofollow">注册</a>
-	    <a rel="nofollow" href="/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" >登录</a>
+	    <a rel="nofollow" href="{:U('Public/login/')}&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" >登录</a>
 	     <a href="{:U('Member/index/')}" rel="nofollow">我的外卖</a>
 	<else />    
 	 <a href="{:U('Member/index/')}"><i class="fa fa-user-md"></i> <empty name="nickname">{$username}<else />{$nickname}</empty></a></li>
@@ -28,7 +23,7 @@
   <div class="container " > 
      <div class="row hidden-xs">
         <div class="col-md-3 col-xs-7">
-		<a href="/"><img src="templates/mall/images/logo/logo.png"></a>
+		<a href="__ROOT__"><img src="__ROOT__{$logo}" height="75px"></a>
 		</div>
 		<div class="col-md-1"></div>
         <div class="col-md-5">
@@ -40,8 +35,8 @@
 	
 		<empty name="uid">
 		<eq name="isorder" value="0">
-	 <a rel="nofollow" class="btn btn-cart btn-lg " style="margin-top:15px;" href="/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" ><i class="fa fa-shopping-cart"></i> 立刻结算</a>
-	     
+	 	<a rel="nofollow" class="btn btn-cart btn-lg " style="margin-top:15px;" href="/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>" >
+	 		<i class="fa fa-shopping-cart"></i> 立刻结算</a>
 		<else/>
 			<a data-toggle="modal" data-target="#myModal"  class="btn btn-cart btn-lg" style="margin-top:15px;"><i class="fa fa-shopping-cart"></i> 购物车 <span class="simpleCart_quantity"></span></a> 
 
@@ -54,11 +49,6 @@
 		</div>
   
       </div>
-	 
-
-
-
-
 <nav class="navbar bs-docs-nav" role="navigation" style="margin-top:10px;">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -77,7 +67,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     
 	<ul class="nav navbar-nav">
-      <li><a href="/">首页</a></li>
+      <li><a href="__ROOT__">首页</a></li>
      
 	  <li><a href="{:U('Article/l/','id=15')}">促销</a></li>
 	  <li><a href="{:U('Gift/index/')}">积分</a></li>
@@ -96,21 +86,4 @@
   </div><!-- /.navbar-collapse -->
 </nav>
 
-
-	 
-	  
-	  
-	  
   </div>
-
-
-
-
-
-
-
-
-
-
-
-

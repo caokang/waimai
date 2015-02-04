@@ -45,16 +45,12 @@
    <li> <a href="{:U('List/index/','id='.$sub['fcid'])}" class="list-group-item"><span style="margin-left:60px;">{$sub.fcname}</span><span class="fa fa-caret-right pull-right"></span></a></li>
   </volist>
 </ul>
-			 
-			 
-			 
-			 
+
 			 </div>
 			 <div class="col-md-6 hidden-sm">
 			 
 			<div class="row top5" >
-			
-			
+
 			  <volist name="foodlist" id="vo" offset="0" length='9'>
 
 			   <div class="col-sm-4 col-xs-6 simpleCart_shelfItem row-padding">
@@ -79,36 +75,13 @@
 		</p>
 		<div class="clearfix"></div>
 	  </div>
-	  
-	  
-	  
-	
-		
-		
+
 		
       </div>
 	   </div>
-			 
-			   
+ 
 			    </volist>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-	
-	  
 	  </div>
-
-
-			 
-	
-			 
 			 </div>
 			 <div class="col-md-3 col-sm-6">
 			 
@@ -160,17 +133,6 @@
 	  </div>
     </div>
   </div>	 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
 			 <div class="panel panel-default hidden-xs ">
   <div class="panel-heading">
     <h3 class="panel-title">网站公告</h3>
@@ -184,66 +146,26 @@
 <li><a href="{:U('Article/s/','id='.$vo['aid'])}" title="{$vo.atitle}">{$vo.atitle}</a> </li>
 </volist>
 </ul>
-
-
   </div>
 </div>
-			 
 			 </div>
 			 
 		</div>
  
    </div>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-
-
-
 <include file="Public:foot" />
 
 
 
 <div class="container">
 	<empty name="llist"><else /> 友情链接：<volist name="llist" id="vo"><a style="color:#aaa" href="{$vo.link}" target="_blank"> {$vo.linkname} </a> 　　</volist></empty>
-
-	
 	</div>
-
 <!-- Modal -->
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   
 </div><!-- /.modal -->
 
-	<!-- copy right:超级外卖  www.bijiadao.net-->
 </body>
 <!-- END BODY -->
 </html>

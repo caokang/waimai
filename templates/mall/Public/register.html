@@ -18,7 +18,9 @@
 	
 
 	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<!-- 
 	<link href="__ROOT__/templates/kfc/css/kfc.css" rel="stylesheet" type="text/css"/>
+	 -->
 	<link href="__ROOT__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<!-- BEGIN THEME STYLES --> 
@@ -32,14 +34,12 @@
 	
 </head>
 <!-- BEGIN BODY -->
-<body style="background:url(/Public/images/regbg.jpg) no-repeat scroll center top #DBF1FC;">
+<body style="background:url(__ROOT__/Public/images/regbg.jpg) no-repeat scroll center top #DBF1FC;">
 
 
 <div class="container" style="min-height: 350px;padding-top:20px" >
-<a href="/">
-<p align="center"><img src="{$logo}"></p>
-</a>
-<p ><a class="pull-right" href="/">返回首页</a></p>
+<p align="center"><a href="__ROOT__"> <img src="__ROOT__{$logo}" height="100px" > </a></p>
+<p ><a class="pull-right" href="__ROOT__">返回首页</a></p>
 <div class="clearfix"></div>
 <div class="panel panel-default">
   <div class="panel-body">
@@ -48,24 +48,15 @@
   
     
 <p class="lead" style="border-bottom: 1px solid #eee;padding: 0 10px;">用户注册   </p>
-	
-	
-	
 	    <div class="col-md-offset-1 col-lg-7 col-xs-12">
-
-		
 		<br>
-
-
-
-
-<form class="form-horizontal"    action="/index.php?m=Public&a=doregister" method="post"   role="form">
+<form class="form-horizontal"    action="{:U('Public/doregister/')}" method="post"   role="form">
 
 
  <div class="form-group">
     <label class="col-sm-3 control-label" for="inputE">用户名：</label>
     <div class="col-sm-5">
-      <input type="text" placeholder="" name="username" id="inputE" datatype="*6-18" ajaxurl="/index.php?m=Public&a=checkuser" errormsg="昵称至少6个字符,最多18个字符！" class="form-control"> 
+      <input type="text" placeholder="" name="username" id="inputE" datatype="*6-18" ajaxurl="{:U('Public/checkuser/')}" errormsg="昵称至少6个字符,最多18个字符！" class="form-control"> 
     </div>
 	<div class="col-sm-4">
 <span class="help-block"><div class="Validform_checktip">用户名为6~18个字符</div></span>
@@ -75,7 +66,7 @@
    <div class="form-group">
     <label class="col-sm-3 control-label" for="inputEmail">邮箱：</label>
     <div class="col-sm-5">
-      <input type="email" placeholder="" name="useremail" id="inputEmail" class="form-control" datatype="e" ajaxurl="/index.php?m=Public&a=checkemail" nullmsg="请输入邮箱号！" errormsg="您输入的邮箱号不正确！"> 
+      <input type="email" placeholder="" name="useremail" id="inputEmail" class="form-control" datatype="e" ajaxurl="{:U('Public/checkemail/')}"  nullmsg="请输入邮箱号！" errormsg="您输入的邮箱号不正确！"> 
     </div>
 	<div class="col-sm-4">
 <span class="help-block"><div class="Validform_checktip">用来登录超级外卖，需要接收到激活邮件 ​</div></span></div>
@@ -108,7 +99,7 @@
        <div class="form-group">
     <label class="col-sm-3 control-label" for="inputEmail">验证码：</label>
     <div class="col-sm-3">
-      <input type="text" placeholder="" name="verify" id="inputEmail" class="form-control" datatype="*" ajaxurl="/index.php?m=Public&a=checkverify" nullmsg="请再输入验证码" errormsg="请输入正确的验证码！"> 
+      <input type="text" placeholder="" name="verify" id="inputEmail" class="form-control" datatype="*" ajaxurl="{:U('Public/checkverify/')}"   nullmsg="请再输入验证码" errormsg="请输入正确的验证码！"> 
     </div>
 	<div class="col-sm-6">
 <span class="help-block"> <img src="__APP__?m=Public&a=verify" />
@@ -124,90 +115,17 @@
   </div>
 </form>
 
-
-		
 	已有帐号点击 <a href="{:U('Public/login/')}&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST']);</php>" ><strong> 登录</strong> </a>	
 		
-
 		</div><!-- end col-8-->
-		<div class="col-lg-4 col-xs-4">
-		<div style=" border-left: 1px solid #E5E5E5;min-height:300px;">
-		
-		
-		
-         
-
-
-
-
-              
-
-        
-		
-		
-		</div>
-		
-		
-		
-		</div><!-- end col-4-->
-		
-		
-		
-		
-		
-		
+		<div class="col-lg-4 col-xs-4"><div style=" border-left: 1px solid #E5E5E5;min-height:300px;"></div></div><!-- end col-4-->
       </div><!-- end row -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   
   </div>
   
 </div><!-- "panel end -->
-
-	  
 	  
 </div><!-- end container -->
 
-
-
-         
-	
-
-
-			
-			
-			
-			
-		
-			
-				
-				
-				
-			
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<!-- END FOOTER -->
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 	<!-- BEGIN CORE PLUGINS -->   
@@ -215,9 +133,6 @@
 	<script src="img/js/respond.min.js"></script>
 	<script src="img/js/html5shiv.min.js"></script> 
 	<![endif]-->   
-	
-	
-	
 
     <script src="__ROOT__/Public/js/jquery.js"></script>
     <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
@@ -225,14 +140,11 @@
 	
 <script >
 	$(function(){
-	//$(".registerform").Validform();  //就这一行代码！;
-		
-	$(".form-horizontal").Validform({
-		tiptype:2
-	});
-})
-
-	
+		//$(".registerform").Validform();  //就这一行代码！;
+		$(".form-horizontal").Validform({
+			tiptype:2
+		});
+	})
 </script>	
 
 	<!-- END CORE PLUGINS -->
