@@ -209,7 +209,7 @@ INSERT INTO `sn_config` VALUES('1','0','name','1','网站名称','','网站名�
 INSERT INTO `sn_config` VALUES('3','0','url','1','网站URL','','网站域名,不带/','0','0','0','http://www.wm126.com','0');
 
 
-INSERT INTO `sn_config` VALUES('4','0','logo','5','logo','','logo上传','0','0','0','/templates/kfc/images/logo/logo.png','0');
+INSERT INTO `sn_config` VALUES('4','0','logo','5','logo','','logo上传,250px-75px','0','0','0','/templates/kfc/images/logo/logo.png','0');
 
 
 INSERT INTO `sn_config` VALUES('5','0','key','1','关键字','','网站SEO关键字','0','0','0','fds969','0');
