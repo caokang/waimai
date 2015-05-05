@@ -472,7 +472,7 @@ method: "POST" ,
 	currency: "JPY",
 	shippingQuantityRate: 0,
 	shippingTotalRate: 0,
-	 shippingFlatRate: 10,
+	 shippingFlatRate: {$pspay},
 	cartColumns: [
 { attr: "name" , label: "商品" } ,
 { attr: "price" , label: "单价", view: 'currency' } ,
