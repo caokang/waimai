@@ -79,7 +79,7 @@
 											
 											<th>分类</th>
 											<th>排序</th>
-											
+											<th>状态</th>
 											<th>操作</th>
 											
 										</tr>
@@ -93,13 +93,22 @@
 											
 											<td>{$vo.fcname}</td>
 											<td>{$vo.fsort}</td>
-																		
+											<td>
+											<eq name="vo.status" value="0">上架<else/>下架</eq>
+
+											</td>							
 											
 											<td>
 											    
-											    <a href="{:U('Food/edit/','id='.$vo['fid'])}"><i class="fa fa-trash-o"></i> 修改</a>
-												<a href="{:U('Food/del/','id='.$vo['fid'])}"><i class="fa fa-trash-o"></i> 删除</a>
+											    <a class="btn btn-default btn-xs" href="{:U('Food/edit/','id='.$vo['fid'])}"> 修改</a>　
+													<eq name="vo.status" value="0">
+													<a class="btn btn-default btn-xs" href="{:U('Food/down/','id='.$vo['fid'])}" onclick="down()">下架</a>
+													<else/>
+													<a class="btn btn-primary btn-xs" href="{:U('Food/up/','id='.$vo['fid'])}" onclick="up()"> 上架</a>
+													</eq>
+												   
 												
+　<a class="btn btn-default btn-xs" href="{:U('Food/del/','id='.$vo['fid'])}" onclick="delcfm()"><i class="fa fa-trash-o"></i> 删除</a>
 											</td>
 											
 										</tr>
@@ -197,8 +206,16 @@ window.event.returnValue = false;
 }
 }
 
-
-
+function down() {
+if (!confirm("确认此商品上架？")) {
+window.event.returnValue = false;
+}
+}
+function up() {
+if (!confirm("确认此商品下架？")) {
+window.event.returnValue = false;
+}
+}
 
 </script>	
 
