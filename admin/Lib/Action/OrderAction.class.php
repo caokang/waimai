@@ -97,8 +97,12 @@ class OrderAction extends CommonAction {
 	   		 $data['oid']=I('id');
 	   	  $Order=M('Foodorder');
 	     $map['orderstatus']=4;
+		 $map['order_endtime']=time();
 		 $result=$Order->where($data)->save($map);
 	     if($result){
+		   $Config=M('Config');
+		   $con['name']='points';
+		   $point=$Config->where($con)->find();
 		    //积分操作
 			$oitem=$Order->where($data)->find();
 			$Credit=M('Credit');
@@ -107,7 +111,7 @@ class OrderAction extends CommonAction {
 	  $datas['uid']=$oitem['uid'];
 	 
 
-	  $datas['crecount']=floor($oitem['orderprice']);
+	  $datas['crecount']=floor($oitem['orderprice']/$point['value']);
 	  $datas['ctime']=time();
 	  $datas['ip']=get_client_ip();
 	  $Credit->add($datas);

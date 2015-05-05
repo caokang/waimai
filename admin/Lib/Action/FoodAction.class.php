@@ -7,10 +7,10 @@
 
 class FoodAction extends CommonAction {
 
- 
+
 
     public function index() {
-	
+
 	    $Food=D('FoodView');
 		import('ORG.Util.Page');// 导入分页类
         $count      = $Food->count();// 查询满足要求的总记录数
@@ -19,18 +19,18 @@ class FoodAction extends CommonAction {
           // 进行分页数据查询 注意limit方法的参数要使用Page类的属性
         $foodlist = $Food->limit($Page->firstRow.','.$Page->listRows)->order('fid desc')->select();
         $this->assign('page',$show);// 赋值分页输出
-		
+
 		$this->assign('foodlist',$foodlist);
-		
-	
+
+
         $this->display();
     }
 
- 
+
 
  //分类显示
      public function alist(){
-  
+
      $map['fcid']=$this->_get('id');
 	 $Food=D('FoodView');
 	 import('ORG.Util.Page');// 导入分页类
@@ -39,39 +39,39 @@ class FoodAction extends CommonAction {
         $show       = $Page->show();// 分页显示输出
           // 进行分页数据查询 注意limit方法的参数要使用Page类的属性
         $foodlist= $Food->where($map)->limit($Page->firstRow.','.$Page->listRows)->order('fid desc')->select();
-        $this->assign('page',$show);// 赋值分页输出		
+        $this->assign('page',$show);// 赋值分页输出
 		$this->assign('foodlist',$foodlist);
         $this->display();
-     
-   } 
-	
-   
+
+   }
+
+
    /**
  * 桌号增加，
- */  
- 
+ */
+
      public function add() {
 	    $Foodcat=M('Foodcat');
 		$foodcatlist=$Foodcat->select();
 
 		$this->assign('foodcatlist',$foodcatlist);
-	 
-	 $this->display(); 
-	 
+
+	 $this->display();
+
 	 }
- 
- 
- 
- 
- 
-   
+
+
+
+
+
+
      public function addsave() {
-	 
-	 if (!$_FILES["pic"]["name"]){ //图片为空不做图片处理	
-	 
-	 
+
+	 if (!$_FILES["pic"]["name"]){ //图片为空不做图片处理
+
+
 		$Food=D("Food");
-		
+
 		$map['fname']=$_POST['fname'];//菜名
 		$map['fcid']=$_POST['fcid'];
 		$map['ftitle']=$_POST['ftitle'];//特点
@@ -79,8 +79,8 @@ class FoodAction extends CommonAction {
 		$map['fsort']=$_POST['fsort'];
 		$map['fprice']=$_POST['fprice'];
 		$map['fctime']=time();
-		
-	
+
+
 if (!$Food->create($map)){
     // 如果创建失败 表示验证没有通过 输出错误提示信息
 
@@ -90,11 +90,11 @@ $this->error($Food->getError());
 	 $result=$Food->add($map);
 	 $this->success('操作成功');
 }
-		
+
 	 }//为空处理完成
      else {
-	 
-	  import('ORG.Net.UploadFile');	  
+
+	  import('ORG.Net.UploadFile');
        $upload = new UploadFile();// 实例化上传类
        $upload->maxSize  = 2145728 ;// 设置附件上传大小
        $upload->allowExts  = array('jpg');// 设置附件上传类型
@@ -112,10 +112,10 @@ $this->error($Food->getError());
        }else {// 上传成功 获取上传文件信息
        $info =  $upload->getUploadFileInfo();
        }
-	 
-	 
+
+
 	 $Food=D("Food");
-		
+
 		$map['fname']=$_POST['fname'];//菜名
 		$map['fcid']=$_POST['fcid'];
 		$map['ftitle']=$_POST['ftitle'];//特点
@@ -124,8 +124,8 @@ $this->error($Food->getError());
 		$map['fprice']=$_POST['fprice'];
 		$map['fpic']='/uploads/fimg/'.$info[0]['savename'];
 		$map['fctime']=time();
-		
-	
+
+
 if (!$Food->create($map)){
     // 如果创建失败 表示验证没有通过 输出错误提示信息
 
@@ -134,35 +134,35 @@ $this->error($Food->getError());
     // 验证通过 可以进行其他数据操作
 	 $result=$Food->add($map);
 	 $this->success('操作成功');
-	
+
 }
-	 
-	 
-	 
-	 }	 
-		
-		
+
+
+
+	 }
+
+
     }
- 
+
 
    /**
  * 桌号修改，
- */   
-  
+ */
+
     public function edit() {
         $Food=M('Food');
-		$map['fid']=$_GET['id'];	    
+		$map['fid']=$_GET['id'];
 		$fooditem=$Food->where($map)->find();
 		$Foodcat=M('Foodcat');
 		$foodcatlist=$Foodcat->select();
 
 		$this->assign('foodcatlist',$foodcatlist);
-		
+
 		$this->assign('item',$fooditem);
-	
-        $this->display(); 
-		
-		
+
+        $this->display();
+
+
     }
 
 	//编辑后保存
@@ -171,11 +171,11 @@ $this->error($Food->getError());
 	   if(!$id){$this->error('文章id不可以为空');}//判定ＩＤ是否为空
 	   $data["fid"] =$id;
 	    $maps['fid']  = array('neq',$id);
-         if (!$_FILES["pic"]["name"]){ //图片为空不做图片处理	
-	 
-	 
+         if (!$_FILES["pic"]["name"]){ //图片为空不做图片处理
+
+
 		$Food=D("Food");
-		
+
 		$map['fname']=$_POST['fname'];//菜名
 		$map['fcid']=$_POST['fcid'];
 		$map['ftitle']=$_POST['ftitle'];//特点
@@ -183,22 +183,22 @@ $this->error($Food->getError());
 		$map['fsort']=$_POST['fsort'];
 		$map['fprice']=$_POST['fprice'];
 		$map['fctime']=time();
-		
-	
+
+
 if (!$Food->where($maps)->create($map)){
     // 如果创建失败 表示验证没有通过 输出错误提示信息
 
 $this->error($Food->getError());
 }else{
     // 验证通过 可以进行其他数据操作
-	 $result=$Food->where($data)->save($map);  
+	 $result=$Food->where($data)->save($map);
 	  $this->success('操作成功',U('Food/index'));
 }
-		
+
 	 }//为空处理完成
      else {
-	 
-	  import('ORG.Net.UploadFile');	  
+
+	  import('ORG.Net.UploadFile');
        $upload = new UploadFile();// 实例化上传类
        $upload->maxSize  = 2145728 ;// 设置附件上传大小
        $upload->allowExts  = array('jpg');// 设置附件上传类型
@@ -216,10 +216,10 @@ $this->error($Food->getError());
        }else {// 上传成功 获取上传文件信息
        $info =  $upload->getUploadFileInfo();
        }
-	 
-	 
+
+
 	 $Food=D("Food");
-		
+
 		$map['fname']=$_POST['fname'];//菜名
 		$map['fcid']=$_POST['fcid'];
 		$map['ftitle']=$_POST['ftitle'];//特点
@@ -228,8 +228,8 @@ $this->error($Food->getError());
 		$map['fprice']=$_POST['fprice'];
 		$map['fpic']='/uploads/fimg/'.$info[0]['savename'];
 		$map['fctime']=time();
-		
-	  
+
+
 
 if (!$Food->where($maps)->create($map)){
     // 如果创建失败 表示验证没有通过 输出错误提示信息
@@ -237,57 +237,86 @@ if (!$Food->where($maps)->create($map)){
 $this->error($Food->getError());
 }else{
     // 验证通过 可以进行其他数据操作
-	 $result=$Food->where($data)->save($map);  
+	 $result=$Food->where($data)->save($map);
 	  $this->success('操作成功',U('Food/index'));
 }
-	 
-	 
-	 
-	 }	 
-		
-		
+
+
+
+	 }
+
+
     }
-   
-   
+
+
       /**
  * 桌号删除，
- */ 
+ */
      public function del() {
-	   
+
 		$Food=M('Food');
 		$map['fid']=$_GET['id'];
-		$Food->where($map)->delete(); 
-	    
+		$Food->where($map)->delete();
+
 		$this->redirect(U('Food/index'));
-		
-		
+
+
     }
-   
-   
-   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+        /**
+ * 上架，
+ */
+     public function down() {
+
+		$Food=M('Food');
+		$map['fid']=$_GET['id'];
+		$Food->where($map)->setField('status','1');
+
+
+		$this->redirect(U('Food/index'));
+
+
+    }
+
+
+          /**
+ * 下架，
+ */
+     public function up() {
+
+		$Food=M('Food');
+		$map['fid']=$_GET['id'];
+		$Food->where($map)->setField('status','0');
+
+		$this->redirect(U('Food/index'));
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
