@@ -39,5 +39,5 @@ if(!is_file('db.php')){
 require(THINK_PATH."/ThinkPHP.php");
 
 // 版本信息
-const SUPERCMS_VERSION  =   '2.0';
+//const SUPERCMS_VERSION  =   '2.4';
 ?>
