@@ -10,7 +10,7 @@ class IndexAction extends CommonAction {
    
 	
       $Food=M('Food');
-	  $foodlist=$Food->limit(15)->order('fid desc')->select();
+	  $foodlist=$Food->limit(15)->order('fid desc')->where('status=0')->select();
 	  $this->assign('foodlist',$foodlist);
 	  $gid=session('gid');
 	  if(!$gid){$gid=$_GET['gid'];
@@ -31,8 +31,9 @@ class IndexAction extends CommonAction {
 	
 	 public function flist(){
 	 $data['fcid']=I('id');//店铺分类
-    $Food=D('Foodcat');		
-	$foodcatlist=$Food->select();		
+	 $data['status']='0';
+    $Foods=D('Foodcat');		
+	$foodcatlist=$Foods->select();		
 	$this->assign('foodcatlist',$foodcatlist);//输出订单号
 	
 	

@@ -21,7 +21,7 @@ class ListAction extends CommonAction {
 	
 	 if ($data['fcid']){
       $Food=M('Food');
-	  
+	  $data['status']='0';
 	 $count      = $Food->where($data)->count();// 查询满足要求的总记录数
          $Page       = new Page($count,12);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
@@ -33,11 +33,11 @@ class ListAction extends CommonAction {
 	 else {
 	 $Food=M('Food');
 	
-	 $count      = $Food->count();// 查询满足要求的总记录数
+	 $count      = $Food->where('status=0')->count();// 查询满足要求的总记录数
          $Page       = new Page($count,12);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
           // 进行分页数据查询 注意limit方法的参数要使用Page类的属性
-        $foodlists = $Food->limit($Page->firstRow.','.$Page->listRows)->select();
+        $foodlists = $Food->where('status=0')->limit($Page->firstRow.','.$Page->listRows)->select();
 		
 	 
 	 
