@@ -10,7 +10,7 @@
  * 应用目录设置
  * 安全期间，建议安装调试完成后移动到非WEB目录
  */
-define('APP_PATH', __DIR__ . '/../app/');
+define('APP_PATH', __DIR__ . '/../application/');
 
 /**
  * 缓存目录设置

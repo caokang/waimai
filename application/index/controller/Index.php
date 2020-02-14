@@ -33,9 +33,9 @@ class Index extends Common
         $llist = $Link->where('type=0')->limit(30)->order('lid desc')->select();
         $this->assign('llist', $llist);
 //         dump($foodlist);
-   return $this->display();
+        //      return $this->display();
 
-        //       return $this->fetch();
+               return $this->fetch();
 
     }
 

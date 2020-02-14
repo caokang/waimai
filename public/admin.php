@@ -5,7 +5,7 @@ namespace think;
 
 //单入口模式
 define('APP_NAME', 'admin');
-define('APP_PATH', __DIR__ . '/../app/');
+define('APP_PATH', __DIR__ . '/../application/');
 
 if(!is_file('db.php')){
 	header('Location: ./install/index.php');
