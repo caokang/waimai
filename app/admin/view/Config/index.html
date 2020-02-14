@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>{$webtitle}－管理后台-基础设置</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+    <link href="__STATIC__/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/admin/css/admin.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="__STATIC__/Public/js/html5shiv.min.js"></script>
+    <script src="__STATIC__/Public/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- END THEME STYLES -->
+
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+<include file="Public:header"/>
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:60px;min-height:600px;">
+
+    <div class="row">
+
+        <div class="col-lg-12 col-md-12 col-xs-12" style="background-color: #FFF;">
+
+            <!-- begin tab -->
+            <ul class="nav nav-tabs ">
+
+                <eq name="cate" value="3">
+                    <li class="active"><a href="__APP__?m=Config&a=index&id=3"><b>店铺设置</b></a></li>
+                    <else/>
+                    <li class=""><a href="__APP__?m=Config&a=index&id=3"><b>店铺设置</b></a></li>
+                </eq>
+                <eq name="cate" value="0">
+                    <li class="active"><a href="__APP__?m=Config&a=index&id=0"><b>基本设置</b></a></li>
+                    <else/>
+                    <li class=""><a href="__APP__?m=Config&a=index&id=0"><b>基本设置</b></a></li>
+                </eq>
+                <empty name="wlefe">
+                    <else/>
+                    <eq name="cate" value="1">
+                        <li class="active"><a href="__APP__?m=Config&a=index&id=1"><b>支付设置</b></a></li>
+                        <else/>
+                        <li class=""><a href="__APP__?m=Config&a=index&id=1"><b>支付设置</b></a></li>
+                    </eq>
+                    <eq name="cate" value="2">
+                        <li class="active"><a href="__APP__?m=Config&a=index&id=2"><b>登录设置</b></a></li>
+                        <else/>
+                        <li class=""><a href="__APP__?m=Config&a=index&id=2"><b>登录设置</b></a></li>
+                    </eq>
+                    <eq name="cate" value="4">
+                        <li class="active"><a href="__APP__?m=Config&a=index&id=4"><b>积分设置</b></a></li>
+                        <else/>
+                        <li class=""><a href="__APP__?m=Config&a=index&id=4"><b>积分设置</b></a></li>
+                    </eq>
+                </empty>
+            </ul>
+            <p></P>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-xs-2"></div>
+                <div class="col-lg-6 col-md-6 col-xs-6"><span class="help-block"></span></div>
+                <div class="col-lg-4 col-md-4 col-xs-4"></div>
+
+            </div>
+            <p></P>
+            <div>
+                <form class="form-horizontal" role="form" enctype="multipart/form-data" action="__APP__?m=Config&a=add"
+                      method="post">
+                    <input type="hidden" class="form-control" name="cate" value="{$cate}">
+                    <volist name="citem" id="vo">
+                        <div class="form-group">
+                            <label for="input{$vo.name}" class="col-sm-2 control-label">{$vo.title}</label>
+                            <div class="col-sm-4">
+                                <switch name="vo.type">
+                                    <case value="1">
+                                        <input type="text" class="form-control" id="input{$vo.name}" name="{$vo.name}"
+                                               value="{$vo.value}">
+                                    </case>
+                                    <case value="2">
+                                        <textarea class="form-control" name="{$vo.name}" rows="2">{$vo.value}</textarea>
+                                    </case>
+                                    <case value="5">
+                                        <input type="file" name="pic" id="" value="{$vo.value}">
+                                    </case>
+                                    <case value="3">
+                                        <volist name="vo[extra]" id="group">
+                                            <div class="form-group">
+                                                <label for="input{$vo.name}"
+                                                       class="col-sm-4 control-label">{$key}：</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="input{$vo.name}"
+                                                           name="{$vo.name}" value="{$group}">
+                                                </div>
+                                            </div>
+                                        </volist>
+                                    </case>
+                                    <case value="4">
+                                        <select name="{$vo.name}" class="form-control">
+                                            <volist name="vo[extra]" id="group">
+                                                <option value="{$key}">{$group}</option>
+                                            </volist>
+                                        </select>
+                                    </case>
+                                </switch>
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="help-block"><i class="fa fa-exclamation"></i> {$vo.remark}</span>
+                            </div>
+                        </div>
+                    </volist>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="sumbit" class="btn btn-primary">保存</button>
+                    </div>
+
+            </div>
+            </form>
+        </div>
+
+    </div><!-- col end -->
+
+</div><!-- end row -->
+</div><!-- end container -->
+
+<!-- /.modal -->
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+
+<!-- 配置文件 -->
+<script src="__STATIC__/Public/js/jquery.js"></script>
+<script src="__STATIC__/Public/js/bootstrap.min.js"></script>
+<include file="Public:foot"/>
+<!-- END CORE PLUGINS -->
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

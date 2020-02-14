@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>{$title}_{$name}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="{key}" name="description"/>
+    <meta content="{des}" name="author"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="__STATIC__/web/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/web/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/web/css/css.css" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+    <script src="__STATIC__/Public/js/html5shiv.min.js"></script>
+    <script src="__STATIC__/Public/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- END THEME STYLES -->
+
+    <script src="__STATIC__/Public/js/jquery.js"></script>
+    <script src="__STATIC__/Public/js/bootstrap.min.js"></script>
+
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<include file="Public:header"/>
+
+
+<!-- begin container -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 hidden-xs">
+            <ul class="list-unstyled left-border">
+                <volist name="foodcatlist" id="sub" offset="0" length='7'>
+
+                    <li><a href="{:url('List/index/','id='.$sub['fcid'])}" class="list-group-item"><span
+                            style="margin-left:60px;">{$sub.fcname}</span><span
+                            class="fa fa-caret-right pull-right"></span></a></li>
+                </volist>
+            </ul>
+
+        </div>
+        <div class="col-md-6 hidden-sm">
+
+            <div class="row top5">
+
+                <volist name="foodlist" id="vo" offset="0" length='9'>
+
+                    <div class="col-sm-4 col-xs-6 simpleCart_shelfItem row-padding">
+                        <div class="thumbnail i_list">
+                            <eq name="islogin" value="1">
+                                <a data-toggle="modal" href="{:url('Index/show','id='.$vo['fid'])}" data-target="#modal">
+
+                                    <else/>
+                                    <a href="{:url('Product/index','id='.$vo['fid'])}">
+
+                            </eq>
+
+
+                            <img src="{$url}{$vo.fpic}">
+                            </a>
+                            <div class="caption">
+                                <h3 class="item_name">{$vo.fname}</h3>
+                                <input value="1" class="item_Quantity" type="hidden">
+                                <p><span class="pull-left item_price"
+                                         style="color:#FF7700;font-weight:600;font-size:14px"> ￥{$vo.fprice} </span>
+                                    <span class="pull-right "><a href="javascript:;"
+                                                                 class="btn btn-warning btn-sm item_add"><i
+                                            class="fa fa-shopping-cart"></i> 加入购物车</a> </span>
+
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </volist>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+
+
+            <div style="background-color:#FF7700" class="panel panel-cart top5">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#collapseOne" data-parent="#accordion" data-toggle="collapse">
+                            <i class="fa fa-shopping-cart"></i> 购物车 <i class="fa fa-angle-down"></i>
+                            <span class="simpleCart_quantity pull-right">0</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapseOne">
+                    <div style="padding:5px;" class="panel-body">
+                        <div style="max-height:250px;overflow:auto;">
+                            <div class="simpleCart_items">
+                                <div>
+                                    <div class="headerRow">
+                                        <div class="item-name">商品</div>
+                                        <div class="item-price">单价</div>
+                                        <div class="item-decrement"></div>
+                                        <div class="item-quantity">数量</div>
+                                        <div class="item-increment"></div>
+                                        <div class="item-total">总价</div>
+                                        <div class="item-remove">操作</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear:left"></div>
+                        <hr class="top5">
+
+                        <div class="count">
+                            数量: <span class="simpleCart_quantity">0</span></div>
+                        <div class="ship">
+                            配送费: <span class="simpleCart_shipping">¥0</span> (含打包费)
+                        </div>
+                        <p class="grand">
+                            合计总额: <span class="simpleCart_grandTotal">¥0</span></p>
+
+                        <p align="center"><span style="margin-right:20px;" class="pull-right"><a href="javascript:;"
+                                                                                                 class="simpleCart_empty">清空</a> </span>
+                            <empty name="uid">
+                                <eq name="isorder" value="0">
+
+                                    <a rel="nofollow" class="btn btn-warning"
+                                       href="/public/index.php?m=public&a=login&reurl=<php>echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);</php>"><i
+                                            class="fa fa-shopping-cart"></i> 立刻结算</a>
+
+                                    <else/>
+                                    <a id="cartIsEmpty" style="display: none;" class="btn btn-default"><i
+                                            class="fa fa-shopping-cart"></i> 购物车为空</a>
+                                    <a id="cartCha" style="display: none;" class="btn btn-default"><i
+                                            class="fa fa-shopping-cart"></i> 差&nbsp;<span id="cha"></span>起送</a>
+                                    <a id="cartSubmit" data-toggle="modal" data-target="#myModal"
+                                       class="btn btn-warning"><i class="fa fa-shopping-cart"></i> 立刻结算</a>
+
+                                </eq>
+
+                                <else/>
+                                <a href="{:url('Cart/index/')}" class="btn btn-warning"><i
+                                        class="fa fa-shopping-cart"></i> 立刻结算</a>
+
+                            </empty>
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default hidden-xs ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">网站公告</h3>
+                </div>
+                <div class="panel-body">
+
+
+                    <ul class="list-unstyled gg" style="margin-bottom:0px;">
+
+                        <volist name="toplist" id="vo">
+                            <li><a href="{:url('Article/s/','id='.$vo['aid'])}" title="{$vo.atitle}">{$vo.atitle}</a></li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<include file="Public:foot"/>
+
+
+<div class="container">
+    <empty name="llist">
+        <else/>
+        友情链接：
+        <volist name="llist" id="vo"><a style="color:#aaa" href="{$vo.link}" target="_blank"> {$vo.linkname} </a> 　　
+        </volist>
+    </empty>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+</div><!-- /.modal -->
+
+</body>
+<!-- END BODY -->
+</html>

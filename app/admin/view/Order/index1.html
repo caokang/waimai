@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>{$webtitle}－管理后台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+ 
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
+	
+	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/css/admin.css" rel="stylesheet" type="text/css"/>
+	<link href="__ROOT__/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN THEME STYLES --> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__ROOT__/Public/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/Public/js/respond.min.js"></script>
+    <![endif]-->
+	<!-- END THEME STYLES -->
+		    <script src="__ROOT__/Public/js/jquery.js"></script>
+    <script src="__ROOT__/Public/js/bootstrap.min.js"></script> 
+	
+ <script src="__ROOT__/Public/js/sco.ajax.js"></script> 
+	  	<link href="__ROOT__/Public/css/print.css" rel="stylesheet" type="text/css"/>
+		<script src="__ROOT__/Public/js/jquery-1.4.4.min.js" type="text/javascript"></script>	
+		<script src="__ROOT__/Public/js/jquery.printPage.js" type="text/javascript"></script>
+ <literal>
+ <script type="text/javascript">  
+  $(document).ready(function() {
+    $(".btnrint").printPage();
+  });
+</script>
+</literal>
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+	 <include file="Public:header" />
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:60px">
+
+	
+
+<div class="row">
+     
+	  
+	  <div class="col-lg-12 col-md-12 col-xs-12" style="background-color: #FFF;">
+	  
+        <h3>订单管理</h3>
+		<hr style="margin-top:0px;margin-bottom:0px;">
+	
+		  <p></P>
+				 <div class="well"> 
+		  <form class="form-inline" role="form"  action="__APP__/Order/index" method="get">
+
+  <div class="form-group">
+    <label for="exampleInputEmail2">订单号：　</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="订单号">
+ 　 </div>
+    <div class="form-group">
+    <label for="exampleInputEmail2">手机号：　</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="手机号">
+  　</div>
+    <div class="form-group">
+   <button type="submit" class="btn btn-primary">搜索</button></div>
+  　　　　
+   <!-- <div class="form-group">
+    <label for="exampleInputName2">用户名：　</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="登录用户名">
+ 　 </div>
+    <div class="form-group">
+    <label for="exampleInputEmail2">下单时间：</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="开始时间">
+  
+  　</div>
+   <div class="form-group">
+    <label for="exampleInputEmail2">至 　</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="结束时间">
+  　
+  </div>
+  
+    <div class="form-group">
+    <label for="exampleInputEmail2">订单状态：</label>
+     <select class="form-control">
+  <option>已提交</option>
+  <option>已确认</option>
+  <option>配送中</option>
+  <option>已完成</option>
+  <option>已取消</option>
+</select>
+  </div>
+  
+
+  -->
+  
+  
+  
+  
+  
+   
+</form>
+		 
+		 </div>
+         
+           <div class="row"> 
+     <div class="col-lg-10 col-md-10 col-xs-12" >
+	<!--		 
+	<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">订单号:</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">用户名:</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail2">手机号:</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail2">用户名:</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+<button type="submit" class="btn btn-default">Sign in</button>
+  
+  </form>
+
+
+-->
+
+
+
+
+
+			 
+			 </div>
+			 <div class="col-lg-4 col-md-4 col-xs-12" ><span class="help-block"></span> </div>
+		  
+		  </div><!-- end 添加 -->
+		 
+  <ul class="nav nav-tabs " >
+		  <li ><a href="{:U('Order/index/')}" ><b>全部订单</b></a></li>
+           <li ><a href="{:U('Order/index/','id=0')}" ><b>最新提交</b></a></li>
+             <li class="active"><a href="{:U('Order/index/','id=1')}" ><b>已确认</b></a></li>
+            <li  ><a href="{:U('Order/index/','id=3')}" ><b>配送中</b></a></li>
+             <li><a href="{:U('Order/index/','id=4')}" ><b>已完成</b></a></li>
+                 
+              
+              
+          </ul>
+
+<br>
+
+			  
+			    <table class="table table-striped table-bordered table-hover">
+									<thead>
+										<thead>
+          <tr>
+            <th>订单号</th>
+           
+		   
+		   <th>用户名/微信号</th>
+		   <th>手机号</th>
+            <th>下单时间</th>
+            <th>订单金额</th>
+			
+			<th>结束时间</th>
+			<th>支付方式</th>
+			<th>订单状态</th>
+			<th>操作</th>
+          </tr>
+        </thead>
+									
+									<tbody>
+									<volist name="orderlist" id="vo">
+										<tr>
+											<td>{$vo.oid}</td>
+											
+											
+											
+											<td>{$vo.uname}/<empty name="vo.gid">
+											<else /> <i class="fa fa-comments" style="color:green;"></i>
+											</empty></td>
+											<td>{$vo.otel}</td>
+											<td>{$vo.order_ctime|date="Y-m-d H:i",###}</td>
+											
+											
+											<td>{$vo.orderprice}</td>
+											<td>
+											<empty name="vo.order_endtime">
+											<else /> {$vo.order_endtime|date="Y-m-d H:i",###}
+											</empty>
+
+											</td>
+											<td>
+											
+																					<switch name="vo.paytype" >
+<case value="1" >货到付款</case>
+<case value="2">在线支付</case>
+
+<default />
+</switch>
+											
+											</td>
+											<td><span style="color:#428BCA;font-size:10px;">
+											<switch name="vo.orderstatus" >
+<case value="0" >订单提交</case>
+<case value="1">已确认</case>
+<case value="2">已确认</case>
+<case value="3">送货中</case>
+<case value="4">收货完成</case>
+<case value="5">取消订单</case>
+<case value="6">无效订单</case>
+<default />默认情况
+</switch>
+
+</span>										
+											</td>
+											<td>
+											
+										<a class="btn btn-default btn-xs" href="{:U('Order/detail/','id='.$vo['oid'])}" data-toggle="modal" data-target="#myModal"> 查看</a>
+																				<switch name="vo.orderstatus" >
+<case value="0" > <a class="btn btn-primary btn-xs" href="{:U('Order/orderone/','id='.$vo['oid'])}" >确认</a> <a class="btn btn-default btn-xs" href="{:U('Order/ordersix/','id='.$vo['oid'])}" onClick="delq()">订单取消</a> <a class="btn btn-default btn-xs" href="{:U('Order/delete/','id='.$vo['oid'])}" onClick="delcfm()">删除</a></case>
+<case value="1">  <a class="btn btn-primary btn-xs" href="{:U('Order/ordertwo/','id='.$vo['oid'])}" >出单</a> <a class="btn btn-default btn-xs btnrint" href="{:U('Order/orderprint/','id='.$vo['oid'])}" >打印</a> <a class="btn btn-default btn-xs" href="{:U('Order/delete/','id='.$vo['oid'])}" onClick="delcfm()">删除</a></case>
+<case value="2"><a class="btn btn-primary btn-xs" href="{:U('Order/orderthree/','id='.$vo['oid'])}" onClick="delcf()">送货</a> <a class="btn btn-default btn-xs btnrint" href="{:U('Order/orderprint/','id='.$vo['oid'])}" >打印</a> <a class="btn btn-default btn-xs" href="{:U('Order/delete/','id='.$vo['oid'])}" onClick="delcfm()">删除</a></case>
+<case value="3"><a class="btn btn-primary btn-xs" href="{:U('Order/orderfour/','id='.$vo['oid'])}" onClick="delc()">完成</a> <a class="btn btn-default btn-xs" href="{:U('Order/delete/','id='.$vo['oid'])}" onClick="delcfm()">删除</a></case>
+<case value="4"></case>
+<case value="5"></case>
+<case value="6"></case>
+<default />默认情况
+</switch>
+											
+											
+											</td>
+											
+										</tr>
+									</volist>
+									</tbody>
+								</table>
+			    
+			  
+			  
+			  
+
+
+
+			   <ul class="pagination">
+							    {$page}
+                                
+                             </ul>
+
+	 <p><span class="help-block">订单流程：订单提交－订单确认－订单配送－订单完成</span></P>
+
+
+		   
+		  
+			  
+			  
+			  
+			  </div><!-- tab1 -->
+			  
+	
+
+			  
+			  
+			
+             
+	
+     
+
+	  
+	  
+	  
+	
+	 </div><!-- col end -->
+
+</div><!-- end row -->
+
+
+  
+
+
+    
+</div><!-- end container -->
+
+
+    
+         
+	
+
+
+	
+<!-- /.modal -->
+
+
+
+	<!-- Large modal-->
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+    </div>
+  </div>
+</div>
+
+
+	
+
+
+
+	
+	
+	<script>
+	
+	function delcfm() {
+if (!confirm("确认要删除操作？")) {
+window.event.returnValue = false;
+}
+}
+ 
+ function delcf() {
+if (!confirm("确认订单需要配送？")) {
+window.event.returnValue = false;
+}
+}
+ function delc() {
+if (!confirm("确认订单已完成？")) {
+window.event.returnValue = false;
+}
+}
+  function delq() {
+if (!confirm("确认取消订单？")) {
+window.event.returnValue = false;
+}
+}
+</script>
+	
+	
+	
+	
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->   
+
+	
+	
+	
+  
+
+
+</body>
+<!-- END BODY -->
+</html>

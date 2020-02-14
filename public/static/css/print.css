@@ -1,0 +1,4 @@
+#printMessageBox{position:fixed; _position:absolute; top:50%; left:50%;text-align:center;margin: -60px 0 0 -155px;width:310px; height:120px; font-size:16px; padding:10px; color:#222; font-family:helvetica, arial;
+          opacity:0;background:#fff url(/public/static/Public/images/index.gif) center 40px no-repeat;
+          *background:#fff url(/public/static/Public/images/print_icon.gif) center 40px no-repeat;
+		  border: 6px solid #555;border-radius:8px; -webkit-border-radius:8px; -moz-border-radius:8px;box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-shadow:0px 0px 10px #888}
