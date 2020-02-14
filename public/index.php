@@ -20,12 +20,12 @@ define('APP_PATH', __DIR__ . '/../application/');
 
 //define('TMPL_PATH', './templates/');
 
-if(!is_file('db.php')){
-	header('Location: ./install/index.php');
-	exit;
+// 判断是否安装waimai
+if (!is_file(__DIR__ . '/../install.lock'))
+{
+    header("location:./install.php");
+    exit;
 }
-
-
 
 
 /**

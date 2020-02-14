@@ -1,0 +1,1 @@
+<div class="footer"> &copy; 2012-2013 <a href="http://www.bijiadao.net" target="_blank">www.bijiadao.net</a>　&& SUPERCMS　　简单实用 </div>

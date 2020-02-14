@@ -54,7 +54,7 @@ var n=0;
         });
     }
     function gonext(){
-        window.location.href='../../index.php';
+        window.location.href='../../../index.php';
     }
     $(document).ready(function(){
         reloads(n);
